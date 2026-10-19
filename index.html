@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>CogCore — self-hosted memory and infrastructure for AI agents</title>
+  <meta name="description" content="Self-hosted memory, MCP servers and agent rooms installed on your own servers. For technical teams whose data cannot leave their perimeter.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231f6feb'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23fff' stroke-width='3'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="CogCore home">
+      <span class="brand-mark" aria-hidden="true"></span>CogCore
+    </a>
+    <nav aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#packages">Packages</a>
+      <a href="#how">How I work</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Self-hosted AI infrastructure</p>
+      <h1>I install memory, MCP servers and agent rooms for AI agents on your own servers.</h1>
+      <p class="lead">For technical teams whose data cannot go to the cloud. Open-source core, your hardware, no third party in the loop.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact">Start a free pilot</a>
+        <a class="btn btn-ghost" href="https://github.com/mocartlex-wq/cognitive-core" rel="noopener">Source on GitHub</a>
+      </div>
+      <ul class="hero-facts" aria-label="Key facts">
+        <li><strong>754</strong> tests in the open-source core</li>
+        <li><strong>133k</strong> lines of CRM code in production</li>
+        <li><strong>14k</strong> tests in the nightly QA run</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="work" class="section">
+    <div class="wrap">
+      <h2>Work</h2>
+      <p class="section-intro">Three systems I built and run. The numbers come from the repositories and the nightly test reports.</p>
+
+      <div class="cards cards-3">
+        <article class="card">
+          <h3>Cognitive Core</h3>
+          <p class="card-sub">Open-source long-term memory for AI agents over MCP</p>
+          <ul class="facts">
+            <li><strong>5-layer</strong> memory model</li>
+            <li><strong>MCP</strong> server for Claude Code, Cursor and ChatGPT</li>
+            <li><strong>Live</strong> public instance</li>
+            <li><strong>754</strong> automated tests</li>
+          </ul>
+          <p>Memory and rooms for multi-agent work in one self-hosted service. MIT licence, Docker image, installs on a single server.</p>
+          <p class="links">
+            <a href="https://github.com/mocartlex-wq/cognitive-core" rel="noopener">GitHub</a>
+            <a href="https://mcp.me-ai.ru" rel="noopener">Live instance</a>
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>AI-CRM</h3>
+          <p class="card-sub">AI assistant inside the CRM of a services company</p>
+          <ul class="facts">
+            <li><strong>133k</strong> lines of Python, TypeScript and SQL</li>
+            <li><strong>11k</strong> automated tests</li>
+            <li><strong>Telegram</strong> bot for the team</li>
+            <li><strong>EGRUL</strong> company-registry integrations</li>
+          </ul>
+          <p>In production since 2026. The assistant works on company data inside the office network, with nothing sent to a third-party CRM vendor.</p>
+          <blockquote class="testimonial">
+            <p>[testimonial: one or two sentences from a CRM user]</p>
+            <footer>[name, role, company]</footer>
+          </blockquote>
+        </article>
+
+        <article class="card">
+          <h3>Infrastructure</h3>
+          <p class="card-sub">The server and QA loop behind both systems</p>
+          <ul class="facts">
+            <li><strong>Ubuntu</strong> server I own and administer</li>
+            <li><strong>Docker</strong> for every service</li>
+            <li><strong>WireGuard</strong> for private access</li>
+            <li><strong>14k</strong> tests every night</li>
+          </ul>
+          <p>Deploys, TLS, backups and a nightly QA run that reports what broke. The same setup I install for clients.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="packages" class="section section-alt">
+    <div class="wrap">
+      <h2>Packages</h2>
+      <p class="section-intro">Fixed scope, fixed price. Every package ends with running software on your server and a written hand-over.</p>
+
+      <div class="cards cards-3 pricing">
+        <article class="card">
+          <h3>Pilot</h3>
+          <p class="price">Free</p>
+          <p class="price-sub">2 weeks</p>
+          <ul class="checklist">
+            <li>Cognitive Core installed on your server</li>
+            <li>One integration: your MCP client, CRM or chat</li>
+            <li>Written report at the end</li>
+          </ul>
+          <p class="note">In return: an honest review and permission to publish a short case study.</p>
+          <a class="btn btn-ghost" href="#contact">Apply for a pilot</a>
+        </article>
+
+        <article class="card card-featured">
+          <h3>Setup</h3>
+          <p class="price">$2,000–4,000</p>
+          <p class="price-sub">one-time</p>
+          <ul class="checklist">
+            <li>Installation on your server or VPS</li>
+            <li>Two integrations</li>
+            <li>Backups, TLS, access over VPN</li>
+            <li>30 days of support after launch</li>
+          </ul>
+          <p class="note">The price depends on your environment and the two integrations. Fixed before work starts.</p>
+          <a class="btn btn-primary" href="#contact">Request a quote</a>
+        </article>
+
+        <article class="card">
+          <h3>Build</h3>
+          <p class="price">from $5,000</p>
+          <p class="price-sub">in stages</p>
+          <ul class="checklist">
+            <li>An agent system for one of your business processes</li>
+            <li>Scoped and priced stage by stage</li>
+            <li>Tests and a nightly QA run included</li>
+            <li>Hand-over to your team</li>
+          </ul>
+          <p class="note">Example: an assistant inside your CRM that works on your data and talks to your team in chat.</p>
+          <a class="btn btn-ghost" href="#contact">Describe your process</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" class="section">
+    <div class="wrap">
+      <h2>How I work</h2>
+      <div class="grid-2">
+        <div>
+          <h3>Text first</h3>
+          <p>Everything goes through writing: email, Discord or Telegram. Specs, decisions and reports are documents you can search later. No status calls.</p>
+        </div>
+        <div>
+          <h3>Async</h3>
+          <p>You write when it suits you. I answer within one working day. Each week ends with a short written report: what shipped, what is next, what I need from you.</p>
+        </div>
+        <div>
+          <h3>A team of AI agents, directed by me</h3>
+          <p>I do not type the code alone. I run a team of AI coding agents that work in parallel, share one memory and leave a trail of tests. I set the architecture, review the output and own the result.</p>
+        </div>
+        <div>
+          <h3>Tests every night</h3>
+          <p>Every night the full test suite runs against the current build: 14,000 tests across my projects. You get a report, not a promise. The same loop is set up for your project from day one.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section section-alt">
+    <div class="wrap wrap-narrow">
+      <h2>FAQ</h2>
+
+      <details>
+        <summary>Does my data leave my server?</summary>
+        <p>No. Everything is installed on your infrastructure: database, memory service, agent rooms. The only outbound traffic is to the LLM provider you choose. If you run a local model, nothing leaves your network.</p>
+      </details>
+
+      <details>
+        <summary>Which LLMs can I use?</summary>
+        <p>Cognitive Core talks to agents over MCP, so it works with the clients your team already uses: Claude Code, Cursor, ChatGPT. For the model that curates memory you pick the provider. In my own systems I use Claude, OpenAI and DeepSeek models.</p>
+      </details>
+
+      <details>
+        <summary>How long does it take?</summary>
+        <p>Pilot: two weeks. Setup: installation plus 30 days of support, with dates fixed before we start. Build: stage by stage, and each stage has its own scope, price and deadline.</p>
+      </details>
+
+      <details>
+        <summary>How do I pay?</summary>
+        <p>By invoice, bank transfer in USD. Setup is paid 50% upfront and 50% on hand-over. Build is paid per stage. The invoice comes from [legal entity, country].</p>
+      </details>
+
+      <details>
+        <summary>What do you need from me to start?</summary>
+        <p>SSH access to a server or VM, one integration target, and one person on your side who can answer questions within a day. The pilot starts within a week of that.</p>
+      </details>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="wrap wrap-narrow">
+      <h2>Contact</h2>
+      <p class="section-intro">Write what you want to run on your own server and what it must connect to. I answer in writing within one working day.</p>
+      <p class="email"><a href="mailto:hello@cogcore.dev">hello@cogcore.dev</a></p>
+
+      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" autocomplete="name" required>
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+        <label>
+          <span>What do you want to run, and where?</span>
+          <textarea name="message" rows="6" required></textarea>
+        </label>
+        <input type="hidden" name="_subject" value="CogCore site: new request">
+        <button class="btn btn-primary" type="submit">Send</button>
+        <p class="form-note">No calls, no calendar. You get a written reply.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>© 2026 CogCore · [legal entity, country]</p>
+    <p>
+      <a href="https://github.com/mocartlex-wq/cognitive-core" rel="noopener">GitHub</a>
+      <a href="https://mcp.me-ai.ru" rel="noopener">Live instance</a>
+      <a href="mailto:hello@cogcore.dev">hello@cogcore.dev</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

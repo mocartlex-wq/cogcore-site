@@ -1,6 +1,6 @@
 # CogCore site
 
-One-page static site for cogcore.dev. Two files, no build step:
+One-page static site for aimail.art. Two files, no build step:
 
 - `index.html` — the page
 - `style.css` — styles, light and dark theme via `prefers-color-scheme`
@@ -21,7 +21,7 @@ Search `index.html` for `[` and fill every placeholder:
 
 1. Sign up at https://formspree.io, create a form, copy its id (looks like `xabcdefg`).
 2. Replace `YOUR_FORM_ID` in the form's `action` attribute.
-3. In the Formspree dashboard, set the notification address to `hello@cogcore.dev` and restrict the form to the `cogcore.dev` domain.
+3. In the Formspree dashboard, set the notification address to `hello@aimail.art` and restrict the form to the `aimail.art` domain.
 
 Any service that accepts a plain HTML `POST` works the same way (Web3Forms, Basin, Getform). Only the `action` URL changes.
 
@@ -42,19 +42,19 @@ Any service that accepts a plain HTML `POST` works the same way (Web3Forms, Basi
 3. Add a file named `CNAME` (no extension) in the root containing one line:
 
    ```
-   cogcore.dev
+   aimail.art
    ```
 
    Commit it with the rest. GitHub Pages uses it to serve the custom domain.
 
 4. In the repository: Settings → Pages → Build and deployment → Source: "Deploy from a branch", Branch: `main`, folder `/ (root)`. Save.
-5. On the same page, under Custom domain, enter `cogcore.dev` and save. Wait for the DNS check to pass, then tick "Enforce HTTPS". The certificate is issued automatically and can take up to an hour after DNS propagates.
+5. On the same page, under Custom domain, enter `aimail.art` and save. Wait for the DNS check to pass, then tick "Enforce HTTPS". The certificate is issued automatically and can take up to an hour after DNS propagates.
 
-`.dev` domains are on the HSTS preload list, so browsers only open them over HTTPS. Until "Enforce HTTPS" is on and the certificate is issued, the site will not open at all. This is expected.
+Until "Enforce HTTPS" is on, the site is served over plain HTTP; turn it on as soon as the DNS check passes.
 
-## DNS records for cogcore.dev
+## DNS records for aimail.art
 
-At the registrar (Namecheap, Porkbun) open the DNS settings for `cogcore.dev` and add:
+At the registrar (Reg.ru) open the DNS settings for `aimail.art` and add:
 
 | Type | Host | Value | TTL |
 |---|---|---|---|
@@ -75,7 +75,7 @@ These are GitHub's documented addresses; verify them against the current list at
 Check propagation:
 
 ```bash
-dig cogcore.dev +noall +answer
+dig aimail.art +noall +answer
 ```
 
 You should see the four A records. Then finish step 5 above.
@@ -88,7 +88,7 @@ Mail records do not conflict with Pages. Add the MX, SPF and DKIM records your m
 
 1. Cloudflare dashboard → Workers & Pages → Create → Pages → Connect to Git, pick the repository.
 2. Framework preset: None. Build command: empty. Output directory: `/`.
-3. After the first deploy, Custom domains → add `cogcore.dev`. If the domain's DNS is already on Cloudflare, the record is created for you; otherwise follow the CNAME instructions shown.
+3. After the first deploy, Custom domains → add `aimail.art`. If the domain's DNS is already on Cloudflare, the record is created for you; otherwise follow the CNAME instructions shown.
 
 ## Updating
 

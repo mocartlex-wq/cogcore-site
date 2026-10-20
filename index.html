@@ -4,18 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark light">
-  <title>CogCore — self-hosted memory and infrastructure for AI agents</title>
-  <meta name="description" content="Self-hosted memory, MCP servers and agent rooms installed on your own servers. For technical teams whose data cannot leave their perimeter.">
-  <meta property="og:title" content="CogCore — self-hosted memory and infrastructure for AI agents">
-  <meta property="og:description" content="Long-term memory, MCP servers and agent rooms, installed on your hardware. Open-source core, no third party in the loop.">
+  <title>CogCore — AI-agent memory and MCP infrastructure on your servers</title>
+  <meta name="description" content="One engineer installs long-term memory, MCP servers and agent rooms for AI agents on your own infrastructure. Memory and storage stay on your servers; model requests go to the provider you choose.">
+  <meta property="og:title" content="CogCore — AI-agent memory and MCP infrastructure on your servers">
+  <meta property="og:description" content="Memory and storage on your infrastructure, model requests to the provider you choose. Fixed-scope installation with a written handover.">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20261019c">
+  <link rel="stylesheet" href="style.css?v=20261020a">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0e14'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%232dd4bf' stroke-width='2' opacity='.35'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%232dd4bf' stroke-width='2' opacity='.7'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%232dd4bf'/%3E%3C/svg%3E">
 </head>
 <body>
+
+<a class="skip" href="#top">Skip to content</a>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
@@ -37,11 +39,11 @@
       <svg class="mark" aria-hidden="true"><use href="#mark"/></svg>CogCore
     </a>
     <nav aria-label="Sections">
+      <a href="#packages" class="nav-keep">Packages</a>
       <a href="#work">Work</a>
       <a href="#how">How I work</a>
-      <a href="#packages">Packages</a>
       <a href="#faq">FAQ</a>
-      <a href="#contact" class="nav-cta">Start a pilot</a>
+      <a href="#contact" class="nav-cta">Apply for a pilot</a>
     </nav>
   </div>
 </header>
@@ -52,24 +54,30 @@
   <section class="hero">
     <div class="wrap">
       <div>
-        <p class="eyebrow">Self-hosted AI infrastructure</p>
-        <h1>Memory, MCP servers and agent rooms for AI agents, <em>on your own servers.</em></h1>
-        <p class="lead">For technical teams whose data cannot go to the cloud. Open-source core, your hardware, no third party in the loop. Installed, tested and handed over in writing.</p>
+        <p class="eyebrow">Self-hosted AI infrastructure · fixed-scope installation</p>
+        <h1>I install AI-agent memory and MCP infrastructure <em>on your servers.</em></h1>
+        <p class="lead">Memory and storage run on your infrastructure. Model requests go to the provider you choose; a local model keeps everything inside your network. Fixed scope, tests every night, written handover.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact">Start a free pilot</a>
-          <a class="btn btn-ghost" href="https://github.com/mocartlex-wq/cognitive-core" rel="noopener">Source on GitHub</a>
+          <a class="btn btn-primary" href="#contact">Apply for a pilot</a>
+          <a class="btn btn-ghost" href="#packages">Packages, from $2,000</a>
         </div>
-        <p class="hero-note"><strong>Works with</strong> Claude Code · Claude Desktop · Cursor · ChatGPT · any MCP client</p>
+        <p class="hero-note">Pilot: <strong>2 weeks, free, two slots</strong>, in exchange for an honest review. Paid setup: <strong>$2,000–4,000</strong>, fixed before we start.</p>
+
+        <div class="person">
+          <div class="person-avatar" aria-hidden="true"><svg class="mark"><use href="#mark"/></svg></div>
+          <div>
+            <p class="person-name">[Full name] <span class="muted">· systems engineer, founder of CogCore</span></p>
+            <p class="person-sub">Builds and runs the systems below. Works in writing, replies within one working day. <a href="https://github.com/mocartlex-wq" rel="noopener">GitHub profile →</a></p>
+          </div>
+        </div>
       </div>
 
       <figure class="diagram-card" aria-labelledby="stack-caption">
-        <svg viewBox="0 0 520 380" role="img" aria-label="Five-layer memory architecture: MCP clients write raw events into layer one, an LLM curator consolidates them into daily buffers, master knowledge and an archive, while an operative workspace answers recall queries and an audit log records every operation.">
-          <!-- clients -->
+        <svg class="stack-svg" viewBox="0 0 520 380" role="img" aria-label="How memory works: MCP clients write raw events into layer one; an LLM curator consolidates them into daily buffers, master knowledge and an archive; an operative workspace answers recall queries; an append-only audit log records every operation.">
           <rect x="24" y="16" width="472" height="42" rx="9" class="d-box"/>
           <text x="40" y="36" class="d-tag">MCP CLIENTS</text>
           <text x="40" y="51" class="d-text">Claude Code · Cursor · ChatGPT · your agents</text>
 
-          <!-- stack -->
           <rect x="24" y="96" width="292" height="48" rx="9" class="d-box l1"/>
           <text x="40" y="115" class="d-tag">L1</text>
           <text x="40" y="131" class="d-text">raw events · messages, tools, files</text>
@@ -86,7 +94,6 @@
           <text x="40" y="325" class="d-tag">L4</text>
           <text x="40" y="341" class="d-text">snapshots · S3 archive · restore</text>
 
-          <!-- vertical flow -->
           <path d="M170 58 V96" class="d-line" marker-end="url(#arrow)"/>
           <path d="M170 144 V166" class="d-line" marker-end="url(#arrow)"/>
           <path d="M170 214 V236" class="d-line" marker-end="url(#arrow)"/>
@@ -95,7 +102,6 @@
           <text x="180" y="229" class="d-sub">weekly</text>
           <text x="180" y="299" class="d-sub">monthly</text>
 
-          <!-- operative workspace -->
           <rect x="344" y="96" width="152" height="118" rx="9" class="d-box-accent"/>
           <text x="358" y="116" class="d-tag">OP · WORKSPACE</text>
           <text x="358" y="136" class="d-text">recall()</text>
@@ -106,16 +112,14 @@
           <path d="M420 96 V58" class="d-line-accent" marker-end="url(#arrow)"/>
           <path d="M432 58 V96" class="d-line-accent d-dash" marker-end="url(#arrow)"/>
 
-          <!-- audit log -->
           <rect x="344" y="236" width="152" height="118" rx="9" class="d-box l5"/>
           <text x="358" y="256" class="d-tag">L5 · AUDIT LOG</text>
           <text x="358" y="276" class="d-text">append-only</text>
           <text x="358" y="294" class="d-sub">every operation,</text>
           <text x="358" y="310" class="d-sub">each agent and tenant</text>
-          <text x="358" y="338" class="d-sub">GDPR · SOC 2</text>
+          <text x="358" y="338" class="d-sub">exportable for audits</text>
           <path d="M316 120 H330 V295 H344" class="d-line d-dash"/>
 
-          <!-- pulse travelling down the stack -->
           <circle r="4" class="d-pulse">
             <animateMotion dur="5s" repeatCount="indefinite" path="M170 58 V330" keyPoints="0;1" keyTimes="0;1" calcMode="linear"/>
           </circle>
@@ -123,6 +127,14 @@
             <animateMotion dur="2.6s" repeatCount="indefinite" path="M330 260 V155 H344"/>
           </circle>
         </svg>
+
+        <ol class="stack-mobile" aria-label="How memory works, step by step">
+          <li class="sl1"><b>Agents write events</b><span>Claude Code, Cursor, ChatGPT send messages, tool calls, files to L1.</span></li>
+          <li class="sl2"><b>Daily: an LLM curates</b><span>Noise is dropped, lessons go to L2 daily buffers.</span></li>
+          <li class="sl3"><b>Weekly: knowledge</b><span>Durable facts and tools land in L3, searchable by vector.</span></li>
+          <li class="sl4"><b>Monthly: archive</b><span>Snapshots to S3 with verified restore (L4).</span></li>
+          <li class="sl5"><b>Always: audit</b><span>Every operation is logged append-only (L5). Agents recall in about 30 ms.</span></li>
+        </ol>
         <figcaption id="stack-caption">Cognitive Core: raw event → daily analysis → weekly synthesis → long-term knowledge. The agent remembers lessons, not keystrokes.</figcaption>
       </figure>
     </div>
@@ -131,25 +143,82 @@
   <!-- ============ STATS ============ -->
   <section class="stats" aria-label="Key numbers">
     <div class="wrap">
-      <div class="stat"><b>754</b><span>tests in the open-source core</span></div>
-      <div class="stat"><b>32</b><span>MCP tools exposed to agents</span></div>
-      <div class="stat"><b>133k</b><span>lines of CRM code in production</span></div>
-      <div class="stat"><b>14,105</b><span>tests passing in last night's run</span></div>
+      <div class="stat"><b>754</b><span>tests in Cognitive Core CI <em>open source, MIT</em></span></div>
+      <div class="stat"><b>32</b><span>MCP tools in the API <em>remember, recall, rooms, media</em></span></div>
+      <div class="stat"><b>133k</b><span>lines in AI-CRM <em>Python, TypeScript, SQL</em></span></div>
+      <div class="stat"><b>14,105</b><span>passed · 17 failed · 386 skipped <em>nightly run, 19 Oct 2026</em></span></div>
+    </div>
+  </section>
+
+  <!-- ============ PACKAGES ============ -->
+  <section id="packages" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Packages</p>
+        <h2>Fixed scope, fixed price</h2>
+        <p class="intro">Every package ends with running software on your server and a written handover your team can follow without me. Prices are fixed before work starts.</p>
+      </div>
+
+      <div class="pricing">
+        <article class="plan">
+          <h3>Pilot</h3>
+          <p class="price">Free</p>
+          <p class="price-sub">2 weeks · two slots at a time</p>
+          <ul class="checklist">
+            <li>Cognitive Core installed on your server</li>
+            <li>One integration: your MCP client, CRM or chat</li>
+            <li>Written report at the end</li>
+          </ul>
+          <p class="note">In return: an honest review and permission to publish a short case study.</p>
+          <a class="btn btn-ghost btn-block" href="#contact">Apply for a pilot</a>
+        </article>
+
+        <article class="plan featured">
+          <span class="tag">Recommended first step</span>
+          <h3>Setup</h3>
+          <p class="price">$2,000–4,000</p>
+          <p class="price-sub">one-time, fixed before we start</p>
+          <ul class="checklist">
+            <li>Installation on your server or VPS</li>
+            <li>Two integrations</li>
+            <li>Backups, TLS, access over VPN</li>
+            <li>Nightly test run configured</li>
+            <li>30 days of support after launch</li>
+          </ul>
+          <p class="note">The price depends on your environment and the two integrations. Paid 50% upfront, 50% on handover.</p>
+          <a class="btn btn-primary btn-block" href="#contact">Request a quote</a>
+        </article>
+
+        <article class="plan">
+          <h3>Build</h3>
+          <p class="price">from $5,000</p>
+          <p class="price-sub">in stages</p>
+          <ul class="checklist">
+            <li>An agent system for one of your business processes</li>
+            <li>Scoped and priced stage by stage</li>
+            <li>Tests and a nightly QA run included</li>
+            <li>Handover to your team</li>
+          </ul>
+          <p class="note">Example: an assistant inside your CRM that works on your data and talks to your team in chat.</p>
+          <a class="btn btn-ghost btn-block" href="#contact">Describe your process</a>
+        </article>
+      </div>
     </div>
   </section>
 
   <!-- ============ WORK ============ -->
-  <section id="work" class="section">
+  <section id="work" class="section section-alt">
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Work</p>
-        <h2>Three systems I built and run</h2>
-        <p>Not demos. Each one is in daily use, has a test suite and a server behind it. The numbers come from the repositories and last night's test report.</p>
+        <h2>What I install, what I have built with it, how I run it</h2>
+        <p class="intro">Three different things: the core you get, an application built on the same approach, and the operations behind both. Numbers come from the repositories and the dated test report.</p>
       </div>
 
       <!-- Cognitive Core -->
       <article class="showcase">
         <div>
+          <p class="role-tag">The core you get</p>
           <h3>Cognitive Core</h3>
           <p class="sub">Open-source long-term memory and shared workspace for AI agents, exposed over MCP.</p>
           <ul class="facts">
@@ -160,15 +229,15 @@
             <li><strong>Docker</strong> image, one-line VPS install</li>
             <li><strong>MIT</strong> licence, 754 tests, CI</li>
           </ul>
-          <p>Most "AI memory" products are <code>add()</code> and <code>search()</code> on a vector database. Cognitive Core consolidates: raw events become daily summaries, then durable knowledge, with a curator filtering noise at every step.</p>
+          <p>Cognitive Core consolidates raw events into daily summaries and durable knowledge, with an LLM curator filtering noise at every step. Your agents remember lessons from last month, not every keystroke.</p>
           <p class="links">
             <a href="https://github.com/mocartlex-wq/cognitive-core" rel="noopener">GitHub</a>
-            <a href="https://mcp.me-ai.ru" rel="noopener">Live instance</a>
+            <a href="https://mcp.me-ai.ru" rel="noopener">Public instance</a>
           </p>
         </div>
         <div class="showcase-media">
           <div class="term">
-            <div class="frame-bar"><i></i><i></i><i></i><span>mcp.me-ai.ru · production</span></div>
+            <div class="frame-bar"><i></i><i></i><i></i><span>mcp.me-ai.ru · health snapshot, 19 Oct 2026</span></div>
 <pre><span class="p">$</span> curl -s https://mcp.me-ai.ru/health
 {
   <span class="k">"healthy"</span>: <span class="ok">true</span>,  <span class="k">"version"</span>: <span class="s">"0.6.0"</span>,
@@ -191,8 +260,9 @@
       <!-- AI-CRM -->
       <article class="showcase flip">
         <div>
+          <p class="role-tag">An application built the same way</p>
           <h3>AI-CRM</h3>
-          <p class="sub">A CRM where AI agents do the research, drafting and follow-ups, built for a services company and running inside its office network.</p>
+          <p class="sub">An internal CRM for a land-surveying company, where AI agents do the research, drafting and follow-ups. Runs inside the company's office network.</p>
           <ul class="facts">
             <li><strong>133k</strong> lines of Python, TypeScript, SQL</li>
             <li><strong>11k</strong> automated tests, CI, pre-commit</li>
@@ -201,16 +271,16 @@
             <li><strong>Registry lookups</strong>: type a company ID, get the profile</li>
             <li><strong>Windows services</strong>, LAN deploy, pgvector search</li>
           </ul>
-          <p>In production since 2026. Deals are created from one sentence, agents propose next actions on every card, and nothing is sent to a third-party CRM vendor. The interface is Russian; the architecture is not.</p>
+          <p><strong>The task:</strong> a sales team of a few people that lost leads in chats and spreadsheets. <strong>What was built:</strong> a CRM where a deal is created from one sentence, a researcher agent fills in the company profile from the public registry, and every card carries a suggested next action. <strong>What the screenshots show:</strong> the home screen with the four agents and the pipeline board with those suggestions. The production interface is in Russian; the workflow below explains what the agents do.</p>
         </div>
         <div class="showcase-media">
           <div class="frame-stack">
             <div class="frame">
-              <div class="frame-bar"><i></i><i></i><i></i><span>AI office · agents and the one-sentence deal creator</span></div>
+              <div class="frame-bar"><i></i><i></i><i></i><span>Home: one-sentence deal creator and four agents</span></div>
               <img src="assets/crm-office.webp" width="1280" height="800" alt="AI-CRM home screen: a prompt box that creates a deal from one sentence, four AI agent cards and a list of recent companies with agent suggestions" loading="lazy">
             </div>
             <div class="frame">
-              <div class="frame-bar"><i></i><i></i><i></i><span>Pipeline · agent suggestions on every card</span></div>
+              <div class="frame-bar"><i></i><i></i><i></i><span>Pipeline: a suggested action on every card</span></div>
               <img src="assets/crm-pipeline.webp" width="1280" height="800" alt="AI-CRM sales pipeline board with stage columns, key metrics on top and a 'suggest an action' button on each card" loading="lazy">
             </div>
           </div>
@@ -220,8 +290,9 @@
       <!-- Infrastructure -->
       <article class="showcase">
         <div>
-          <h3>Infrastructure and the nightly QA loop</h3>
-          <p class="sub">The server and the test loop behind both systems. The same setup I install for clients.</p>
+          <p class="role-tag">Operations behind both</p>
+          <h3>The server and the nightly QA loop</h3>
+          <p class="sub">The same setup I install for clients: Docker, TLS, VPN-only access, backups, and a test run every night.</p>
           <ul class="facts">
             <li><strong>Ubuntu 24.04</strong> server I own and administer</li>
             <li><strong>Docker Compose</strong> for every service</li>
@@ -230,11 +301,11 @@
             <li><strong>Backups</strong> to S3-compatible storage</li>
             <li><strong>14k tests</strong> every night, report in the morning</li>
           </ul>
-          <p>The nightly run is the honest part: it reports what broke, including the 17 tests that failed last night. You get a report, not a promise.</p>
+          <p>The report shows the full status: passed, failed and skipped, with the date. The 17 failures from 19 Oct 2026 are in the morning queue, not hidden. A client project gets the same loop from day one, sized to its own test suite.</p>
         </div>
         <div class="showcase-media">
           <div class="term">
-            <div class="frame-bar"><i></i><i></i><i></i><span>nightly-logs/tests-2026-10-19.log</span></div>
+            <div class="frame-bar"><i></i><i></i><i></i><span>nightly-logs/tests-2026-10-19.log · all projects</span></div>
 <pre><span class="c">[03:30:02]</span> === nightly suite start ===
 <span class="c">[03:50:02]</span> ui tests: <span class="ok">167 passed</span>, 0 failed
 <span class="c">[03:50:02]</span> result: <span class="bad">17 failed</span>, <span class="ok">14105 passed</span>, 386 skipped
@@ -243,8 +314,8 @@
 <span class="c">[03:50:02]</span> === nightly suite done ===
 <span class="c"># the morning starts with these 17, not with guessing</span></pre>
           </div>
-          <figure class="diagram-card" style="margin-top:14px">
-            <svg viewBox="0 0 520 210" role="img" aria-label="Server topology: an Ubuntu server running nginx with TLS, the API, Postgres with pgvector, Redis and MinIO in Docker; reached from the office LAN directly, from outside over WireGuard, and from the internet over HTTPS.">
+          <figure class="diagram-card diagram-scroll" style="margin-top:14px">
+            <svg viewBox="0 0 520 210" role="img" aria-label="Server topology: an Ubuntu server running nginx with TLS, the API, Postgres with pgvector, Redis and MinIO in Docker; reached from the office LAN directly, from outside over WireGuard, and from the internet over HTTPS only; backups go to S3-compatible storage.">
               <rect x="170" y="14" width="200" height="182" rx="10" class="d-box"/>
               <text x="184" y="34" class="d-tag">UBUNTU 24.04 · DOCKER</text>
               <rect x="184" y="46" width="172" height="26" rx="6" class="d-box l3"/><text x="194" y="63" class="d-text">nginx · TLS 443</text>
@@ -263,7 +334,7 @@
               <rect x="400" y="40" width="100" height="40" rx="8" class="d-box"/><text x="412" y="58" class="d-text">internet</text><text x="412" y="72" class="d-sub">443 only</text>
               <path d="M400 60 H370" class="d-line-accent" marker-end="url(#arrow)"/>
 
-              <rect x="400" y="130" width="100" height="40" rx="8" class="d-box"/><text x="412" y="148" class="d-text">S3 off-site</text><text x="412" y="162" class="d-sub">nightly backup</text>
+              <rect x="400" y="130" width="100" height="40" rx="8" class="d-box"/><text x="412" y="148" class="d-text">S3 storage</text><text x="412" y="162" class="d-sub">nightly backup</text>
               <path d="M370 155 H400" class="d-line d-dash" marker-end="url(#arrow)"/>
             </svg>
           </figure>
@@ -273,16 +344,16 @@
   </section>
 
   <!-- ============ HOW I WORK ============ -->
-  <section id="how" class="section section-alt">
+  <section id="how" class="section">
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">How I work</p>
-        <h2>One architect, a team of AI agents, tests every night</h2>
-        <p>I do not type the code alone, and I do not pretend otherwise. I set the architecture, direct AI coding agents that work in parallel, review their output and own the result.</p>
+        <h2>One engineer, a team of AI agents, tests every night</h2>
+        <p class="intro">I design the system, direct AI coding agents that work in parallel, review every change and own the handover. You get a person who answers in writing and a test suite that runs while you sleep.</p>
       </div>
 
       <div class="how-grid">
-        <figure class="diagram-card">
+        <figure class="diagram-card diagram-scroll">
           <svg viewBox="0 0 560 340" role="img" aria-label="Workflow: the client writes a brief; I design the architecture and review; Claude Code, Codex and DeepSeek agents work in parallel sharing one memory; a nightly QA run of 14,000 tests checks the build; a written weekly report goes back to the client.">
             <rect x="16" y="120" width="104" height="56" rx="9" class="d-box"/>
             <text x="30" y="143" class="d-text">You</text>
@@ -325,12 +396,8 @@
 
         <div class="how-list">
           <div>
-            <h4>Text first</h4>
-            <p>Everything goes through writing: email, Discord or Telegram. Specs, decisions and reports are documents you can search later. No status calls.</p>
-          </div>
-          <div>
-            <h4>Async, with a weekly report</h4>
-            <p>You write when it suits you. I answer within one working day. Each week ends with a short written report: what shipped, what is next, what I need from you.</p>
+            <h4>In writing, with a weekly report</h4>
+            <p>Email, Discord or Telegram. Specs, decisions and reports are documents you can search later. I reply within one working day; each week ends with a short written report: what shipped, what is next, what I need from you.</p>
           </div>
           <div>
             <h4>Agents do the typing, I own the result</h4>
@@ -338,65 +405,13 @@
           </div>
           <div>
             <h4>Tests every night</h4>
-            <p>The full suite runs against the current build every night: 14,000 tests across my projects. The same loop is set up for your project from day one, so you see what broke before I do.</p>
+            <p>The full suite runs against the current build every night. Your project gets the same loop from day one, with a report that names what passed and what failed.</p>
+          </div>
+          <div>
+            <h4>Handover you can run without me</h4>
+            <p>Every package ends with documentation for your team: how it is deployed, how to back up and restore, what to do when something breaks. The 30 days of support after launch are for the questions the document did not answer.</p>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PACKAGES ============ -->
-  <section id="packages" class="section">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Packages</p>
-        <h2>Fixed scope, fixed price</h2>
-        <p>Every package ends with running software on your server and a written hand-over your team can follow without me.</p>
-      </div>
-
-      <div class="pricing">
-        <article class="plan">
-          <h3>Pilot</h3>
-          <p class="price">Free</p>
-          <p class="price-sub">2 weeks · limited slots</p>
-          <ul class="checklist">
-            <li>Cognitive Core installed on your server</li>
-            <li>One integration: your MCP client, CRM or chat</li>
-            <li>Written report at the end</li>
-          </ul>
-          <p class="note">In return: an honest review and permission to publish a short case study.</p>
-          <a class="btn btn-ghost btn-block" href="#contact">Apply for a pilot</a>
-        </article>
-
-        <article class="plan featured">
-          <span class="tag">Most requested</span>
-          <h3>Setup</h3>
-          <p class="price">$2,000–4,000</p>
-          <p class="price-sub">one-time, fixed before we start</p>
-          <ul class="checklist">
-            <li>Installation on your server or VPS</li>
-            <li>Two integrations</li>
-            <li>Backups, TLS, access over VPN</li>
-            <li>Nightly test run configured</li>
-            <li>30 days of support after launch</li>
-          </ul>
-          <p class="note">The price depends on your environment and the two integrations.</p>
-          <a class="btn btn-primary btn-block" href="#contact">Request a quote</a>
-        </article>
-
-        <article class="plan">
-          <h3>Build</h3>
-          <p class="price">from $5,000</p>
-          <p class="price-sub">in stages</p>
-          <ul class="checklist">
-            <li>An agent system for one of your business processes</li>
-            <li>Scoped and priced stage by stage</li>
-            <li>Tests and a nightly QA run included</li>
-            <li>Hand-over to your team</li>
-          </ul>
-          <p class="note">Example: an assistant inside your CRM that works on your data and talks to your team in chat.</p>
-          <a class="btn btn-ghost btn-block" href="#contact">Describe your process</a>
-        </article>
       </div>
     </div>
   </section>
@@ -410,8 +425,8 @@
       </div>
 
       <details>
-        <summary>Does my data leave my server?</summary>
-        <p>No. Everything is installed on your infrastructure: database, memory service, agent rooms. The only outbound traffic is to the LLM provider you choose. If you run a local model, nothing leaves your network.</p>
+        <summary>Where does my data live, and what leaves my network?</summary>
+        <p>Database, memory service and agent rooms are installed on your infrastructure, so stored data stays there. Two things can leave: requests to the LLM provider you choose for curation and agents, and backups if you point them at external S3-compatible storage. Run a local model and keep backups in-house, and nothing leaves your network. We agree the exact boundary in writing before installation.</p>
       </details>
       <details>
         <summary>Which LLMs can I use?</summary>
@@ -419,7 +434,7 @@
       </details>
       <details>
         <summary>You say agents write the code. Who is responsible?</summary>
-        <p>I am. I design the architecture, review every change and sign the hand-over. The agents are tooling, like a compiler. What you get is a system with a test suite that runs every night, and a person who answers for it in writing.</p>
+        <p>I am. I design the architecture, review every change and sign the handover. The agents are tooling, like a compiler. What you get is a system with a test suite that runs every night, and a person who answers for it in writing.</p>
       </details>
       <details>
         <summary>How long does it take?</summary>
@@ -427,7 +442,7 @@
       </details>
       <details>
         <summary>How do I pay?</summary>
-        <p>By invoice, bank transfer in USD. Setup is paid 50% upfront and 50% on hand-over. Build is paid per stage. The invoice comes from [legal entity, country].</p>
+        <p>By invoice, bank transfer in USD. Setup is paid 50% upfront and 50% on handover. Build is paid per stage. The invoice comes from [legal entity, country].</p>
       </details>
       <details>
         <summary>What do you need from me to start?</summary>
@@ -442,32 +457,32 @@
       <div>
         <p class="eyebrow">Contact</p>
         <h2>Tell me what should run on your server</h2>
-        <p class="muted">Write what you want to run and what it must connect to. I answer in writing within one working day.</p>
-        <p class="email"><a href="mailto:hello@aimail.art">hello@aimail.art</a></p>
+        <p class="muted">One email is enough. Say which package you have in mind, what you want to run and what it must connect to. You get a written reply within one working day with questions or a scope.</p>
+        <p class="email"><a href="mailto:hello@aimail.art?subject=CogCore%20pilot%20request">hello@aimail.art</a></p>
         <ul class="contact-points">
-          <li><strong>No calls, no calendar.</strong> You get a written reply with questions or a scope.</li>
+          <li><strong>What happens next.</strong> Written reply → a few questions about your environment → scope and dates in writing → start.</li>
           <li><strong>Pilot slots are limited.</strong> Two at a time, so each gets attention.</li>
           <li><strong>Open source first.</strong> Anything generic goes back into Cognitive Core under MIT.</li>
         </ul>
       </div>
 
-      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <label>
-          <span>Name</span>
-          <input type="text" name="name" autocomplete="name" required>
-        </label>
-        <label>
-          <span>Email</span>
-          <input type="email" name="email" autocomplete="email" required>
-        </label>
-        <label>
-          <span>What do you want to run, and where?</span>
-          <textarea name="message" rows="6" required placeholder="e.g. Cognitive Core on our Hetzner VPS, connected to Claude Code for a team of six"></textarea>
-        </label>
-        <input type="hidden" name="_subject" value="CogCore site: new request">
-        <button class="btn btn-primary" type="submit">Send</button>
-        <p class="form-note">Your message goes to hello@aimail.art and nowhere else.</p>
-      </form>
+      <div class="mail-template">
+        <div class="frame-bar"><i></i><i></i><i></i><span>email template · copy, fill in, send</span></div>
+        <pre id="tpl">To: hello@aimail.art
+Subject: CogCore — Pilot / Setup / Build (pick one)
+
+Server: (cloud VPS / on-prem / which OS)
+Agents and clients we use: (Claude Code, Cursor, ChatGPT, own agents)
+What it must connect to: (CRM, chat, database, docs)
+Data constraints: (what may not leave the network)
+Team size and who will own it after handover:
+Timeline:</pre>
+        <div class="mail-actions">
+          <a class="btn btn-primary" href="mailto:hello@aimail.art?subject=CogCore%20%E2%80%94%20Pilot%20%2F%20Setup%20%2F%20Build&body=Server%3A%20%0AAgents%20and%20clients%20we%20use%3A%20%0AWhat%20it%20must%20connect%20to%3A%20%0AData%20constraints%3A%20%0ATeam%20size%20and%20who%20will%20own%20it%20after%20handover%3A%20%0ATimeline%3A%20">Open in your mail app</a>
+          <button class="btn btn-ghost" type="button" id="copy-tpl">Copy template</button>
+        </div>
+        <p class="form-note">Plain email, no form service in between. Your message lands in my mailbox only.</p>
+      </div>
     </div>
   </section>
 
@@ -478,11 +493,23 @@
     <p class="footer-brand"><svg class="mark" aria-hidden="true"><use href="#mark"/></svg>CogCore <span class="muted" style="font-family:var(--body);font-weight:400">· © 2026 · [legal entity, country]</span></p>
     <p>
       <a href="https://github.com/mocartlex-wq/cognitive-core" rel="noopener">GitHub</a>
-      <a href="https://mcp.me-ai.ru" rel="noopener">Live instance</a>
+      <a href="https://mcp.me-ai.ru" rel="noopener">Public instance</a>
       <a href="mailto:hello@aimail.art">hello@aimail.art</a>
     </p>
   </div>
 </footer>
+
+<script>
+  (function () {
+    var b = document.getElementById('copy-tpl'), t = document.getElementById('tpl');
+    if (!b || !t || !navigator.clipboard) return;
+    b.addEventListener('click', function () {
+      navigator.clipboard.writeText(t.textContent).then(function () {
+        var old = b.textContent; b.textContent = 'Copied'; setTimeout(function () { b.textContent = old; }, 1600);
+      });
+    });
+  })();
+</script>
 
 </body>
 </html>

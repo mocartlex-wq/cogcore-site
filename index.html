@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark light">
-  <title>CogCore — AI-agent memory and MCP infrastructure on your servers</title>
+  <title>CogCore — AI-agent memory on your servers, not in someone else's cloud</title>
   <meta name="description" content="One engineer installs long-term memory, MCP servers and agent rooms for AI agents on your own infrastructure. Memory and storage stay on your servers; model requests go to the provider you choose.">
   <meta property="og:title" content="CogCore — AI-agent memory and MCP infrastructure on your servers">
   <meta property="og:description" content="Memory and storage on your infrastructure, model requests to the provider you choose. Fixed-scope installation with a written handover.">
@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20261020a">
+  <link rel="stylesheet" href="style.css?v=20261020b">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0e14'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%232dd4bf' stroke-width='2' opacity='.35'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%232dd4bf' stroke-width='2' opacity='.7'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%232dd4bf'/%3E%3C/svg%3E">
 </head>
 <body>
@@ -55,21 +55,23 @@
     <div class="wrap">
       <div>
         <p class="eyebrow">Self-hosted AI infrastructure · fixed-scope installation</p>
-        <h1>I install AI-agent memory and MCP infrastructure <em>on your servers.</em></h1>
-        <p class="lead">Memory and storage run on your infrastructure. Model requests go to the provider you choose; a local model keeps everything inside your network. Fixed scope, tests every night, written handover.</p>
+        <h1>Your AI agents forget everything between sessions. I fix that <em>on your servers</em>, not in someone else's cloud.</h1>
+        <p class="lead">Self-hosted memory and MCP infrastructure for teams that cannot send data to a vendor. Memory and storage stay on your infrastructure; model requests go to the provider you choose. Installed, tested nightly, handed over with a runbook your team can run without me.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#contact">Apply for a pilot</a>
           <a class="btn btn-ghost" href="#packages">Packages, from $2,000</a>
         </div>
         <p class="hero-note">Pilot: <strong>2 weeks, free, two slots</strong>, in exchange for an honest review. Paid setup: <strong>$2,000–4,000</strong>, fixed before we start.</p>
 
+        <!-- person block: enable once the name is confirmed
         <div class="person">
           <div class="person-avatar" aria-hidden="true"><svg class="mark"><use href="#mark"/></svg></div>
           <div>
-            <p class="person-name">[Full name] <span class="muted">· systems engineer, founder of CogCore</span></p>
-            <p class="person-sub">Builds and runs the systems below. Works in writing, replies within one working day. <a href="https://github.com/mocartlex-wq" rel="noopener">GitHub profile →</a></p>
+            <p class="person-name">NAME <span class="muted">· systems engineer, founder of CogCore</span></p>
+            <p class="person-sub">Builds and runs the systems below. Works in writing, replies within one working day. References on request. <a href="https://github.com/mocartlex-wq" rel="noopener">GitHub profile →</a></p>
           </div>
         </div>
+        -->
       </div>
 
       <figure class="diagram-card" aria-labelledby="stack-caption">
@@ -143,10 +145,10 @@
   <!-- ============ STATS ============ -->
   <section class="stats" aria-label="Key numbers">
     <div class="wrap">
+      <div class="stat"><b>~30 ms</b><span>recall answer for an agent <em>KNN over curated knowledge</em></span></div>
+      <div class="stat"><b>10 min</b><span>from a bare VPS to a running HTTPS stack <em>install-server.sh, Docker Compose</em></span></div>
       <div class="stat"><b>754</b><span>tests in Cognitive Core CI <em>open source, MIT</em></span></div>
-      <div class="stat"><b>32</b><span>MCP tools in the API <em>remember, recall, rooms, media</em></span></div>
-      <div class="stat"><b>133k</b><span>lines in AI-CRM <em>Python, TypeScript, SQL</em></span></div>
-      <div class="stat"><b>14,105</b><span>passed · 17 failed · 386 skipped <em>nightly run, 19 Oct 2026</em></span></div>
+      <div class="stat"><b>14k</b><span>tests run every night across my projects <em>dated report, nothing hidden</em></span></div>
     </div>
   </section>
 
@@ -409,7 +411,7 @@
           </div>
           <div>
             <h4>Handover you can run without me</h4>
-            <p>Every package ends with documentation for your team: how it is deployed, how to back up and restore, what to do when something breaks. The 30 days of support after launch are for the questions the document did not answer.</p>
+            <p>Every package ends with a runbook for your team: how it is deployed, how to back up and restore, what to do when something breaks, plus a two-hour walkthrough. Everything lives in your git. The 30 days of support after launch are for the questions the runbook did not answer.</p>
           </div>
         </div>
       </div>
@@ -437,12 +439,20 @@
         <p>I am. I design the architecture, review every change and sign the handover. The agents are tooling, like a compiler. What you get is a system with a test suite that runs every night, and a person who answers for it in writing.</p>
       </details>
       <details>
+        <summary>What if you disappear in six months?</summary>
+        <p>You keep running without me. The software is MIT-licensed and public. The whole deployment is Docker Compose files in your own git. The handover includes a runbook (deploy, back up, restore, what to do when something breaks) and a two-hour walkthrough with your team. If I vanish, you run <code>docker compose up</code>, and any engineer can read the code I would have read.</p>
+      </details>
+      <details>
+        <summary>Cognitive Core is open source. What am I paying for?</summary>
+        <p>Not for the software. For getting it into your environment: integration with your agents and tools, TLS, VPN-only access, backups with a tested restore, the nightly test loop, the runbook, and 30 days of answering questions after launch. A one-line install gets you a demo; the package gets you something your team can own.</p>
+      </details>
+      <details>
         <summary>How long does it take?</summary>
         <p>Pilot: two weeks. Setup: installation plus 30 days of support, with dates fixed before we start. Build: stage by stage, and each stage has its own scope, price and deadline.</p>
       </details>
       <details>
         <summary>How do I pay?</summary>
-        <p>By invoice, bank transfer in USD. Setup is paid 50% upfront and 50% on handover. Build is paid per stage. The invoice comes from [legal entity, country].</p>
+        <p>By invoice, bank transfer in USD. Setup is paid 50% upfront and 50% on handover. Build is paid per stage. Invoicing entity, contract and a data-processing agreement are agreed in writing before the first payment.</p>
       </details>
       <details>
         <summary>What do you need from me to start?</summary>
@@ -490,7 +500,7 @@ Timeline:</pre>
 
 <footer class="site-footer">
   <div class="wrap footer-inner">
-    <p class="footer-brand"><svg class="mark" aria-hidden="true"><use href="#mark"/></svg>CogCore <span class="muted" style="font-family:var(--body);font-weight:400">· © 2026 · [legal entity, country]</span></p>
+    <p class="footer-brand"><svg class="mark" aria-hidden="true"><use href="#mark"/></svg>CogCore <span class="muted" style="font-family:var(--body);font-weight:400">· © 2026</span></p>
     <p>
       <a href="https://github.com/mocartlex-wq/cognitive-core" rel="noopener">GitHub</a>
       <a href="https://mcp.me-ai.ru" rel="noopener">Public instance</a>

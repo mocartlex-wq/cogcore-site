@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20261020-ledger-current">
+  <link rel="stylesheet" href="style.css?v=20261021a">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0e14'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%232dd4bf' stroke-width='2' opacity='.35'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%232dd4bf' stroke-width='2' opacity='.7'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%232dd4bf'/%3E%3C/svg%3E">
 </head>
 <body>
@@ -230,7 +230,7 @@
       <div class="section-head">
         <p class="eyebrow">Work</p>
         <h2>What I install, what I have built with it, how I run it</h2>
-        <p class="intro">Three different things: the core you get, an application built on the same approach, and the operations behind both. Numbers come from the repositories and the dated test report.</p>
+        <p class="intro">Four different things: the core you get, an application built on the same approach, the same engineering taken into the field, and the operations behind all of it. Numbers come from the repositories and the dated test report.</p>
       </div>
 
       <!-- Cognitive Core -->
@@ -305,10 +305,40 @@
         </div>
       </article>
 
+      <!-- Drone -->
+      <article class="showcase">
+        <div>
+          <p class="role-tag">The same engineering, in the field</p>
+          <h3>Autonomous drone inspection of land parcels</h3>
+          <p class="sub">A government land-registry file goes in; a DJI drone flies the parcel boundary on its own, shoots on the move and comes home. Planning runs on the controller, offline.</p>
+          <ul class="facts">
+            <li><strong>Flown on 18 Oct 2026</strong>: 84 photos out of 83 planned, start to landing without pilot input</li>
+            <li><strong>224 tests</strong>, 32.6k lines: Java on the DJI controller, a JavaScript planning core, Python GIS tools</li>
+            <li><strong>Cadastral XML, DXF, KML</strong> in; local coordinate systems to WGS84; multi-contour parcels</li>
+            <li><strong>Terrain following</strong> from Copernicus DEM, line of sight, no-fly zones, battery and return checks</li>
+            <li><strong>YOLO11s</strong> fine-tuned on aerial imagery: mAP50 0.49, 61 fps on a laptop GPU</li>
+            <li><strong>Post-flight report</strong> with frame footprints, signal track and SHA-256 per photo</li>
+          </ul>
+          <p>Camera geometry, motion-blur limits and coverage are computed from first principles and documented; one planning core is tested in Node, rehearsed on the map and then flown. Honest status: the neural detector and the autonomous search logic run on a PC and in the simulator; the real drone flies planned missions.</p>
+        </div>
+        <div class="showcase-media">
+          <div class="frame-stack">
+            <div class="frame">
+              <div class="frame-bar"><i></i><i></i><i></i><span>DJI Smart Controller: planned inspection, 109 photos, ~10 min</span></div>
+              <img src="assets/drone-mission.webp" width="1280" height="720" alt="Drone controller screen: a planned inspection route around a parcel boundary with side-looking photo legs, quality shots at 30 m and a centre ring, over an offline satellite map" loading="lazy">
+            </div>
+            <div class="frame">
+              <div class="frame-bar"><i></i><i></i><i></i><span>Three-contour parcel from a registry extract on an offline Sentinel-2 basemap</span></div>
+              <img src="assets/drone-parcel.webp" width="1280" height="1600" alt="Satellite basemap with three parcel contours outlined in yellow, their areas labelled, rivers and roads traced" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </article>
+
       <!-- Infrastructure -->
       <article class="showcase">
         <div>
-          <p class="role-tag">Operations behind both</p>
+          <p class="role-tag">Operations behind all of it</p>
           <h3>The server and the nightly QA loop</h3>
           <p class="sub">The same setup I install for clients: Docker, TLS, VPN-only access, backups, and a test run every night.</p>
           <ul class="facts">
@@ -372,43 +402,62 @@
 
       <div class="how-grid">
         <figure class="diagram-card diagram-scroll">
-          <svg viewBox="0 0 560 340" role="img" aria-label="Workflow: the client writes a brief; I design the architecture and review; Claude Code, Codex and DeepSeek agents work in parallel sharing one memory; a nightly QA run of 14,000 tests checks the build; a written weekly report goes back to the client.">
-            <rect x="16" y="120" width="104" height="56" rx="9" class="d-box"/>
-            <text x="30" y="143" class="d-text">You</text>
-            <text x="30" y="160" class="d-sub">brief, in writing</text>
-            <path d="M120 148 H140" class="d-line" marker-end="url(#arrow)"/>
+          <svg viewBox="0 0 640 420" role="img" aria-label="Workflow: the client writes a brief; I design the architecture and review; a team of coding agents (several Claude Code sessions, Codex, DeepSeek, GPT for design) works in parallel; all of them share one memory, Cognitive Core, with twelve registered agents; a nightly QA run of 14,000 tests checks the build; a written weekly report goes back to the client. The products ship their own agents: Alice, Boris, Daria, a dispatcher, a bookkeeper and more. A media team of agents (Seedance, Seedream, SpeechKit, local GPU tools) produces video with automatic review of every cut.">
+            <rect x="16" y="150" width="104" height="56" rx="9" class="d-box"/>
+            <text x="30" y="173" class="d-text">You</text>
+            <text x="30" y="190" class="d-sub">brief, in writing</text>
+            <path d="M120 178 H140" class="d-line" marker-end="url(#arrow)"/>
 
-            <rect x="140" y="112" width="152" height="72" rx="9" class="d-box-accent"/>
-            <text x="154" y="134" class="d-tag">ME</text>
-            <text x="154" y="152" class="d-text">architecture</text>
-            <text x="154" y="168" class="d-text">review · ownership</text>
+            <rect x="140" y="142" width="152" height="72" rx="9" class="d-box-accent"/>
+            <text x="154" y="164" class="d-tag">ME</text>
+            <text x="154" y="182" class="d-text">architecture</text>
+            <text x="154" y="198" class="d-text">review · ownership</text>
 
-            <path d="M292 130 H318 V60 H336" class="d-line" marker-end="url(#arrow)"/>
-            <path d="M292 148 H336" class="d-line" marker-end="url(#arrow)"/>
-            <path d="M292 166 H318 V236 H336" class="d-line" marker-end="url(#arrow)"/>
+            <text x="336" y="26" class="d-tag">CODING AGENTS · IN PARALLEL</text>
+            <path d="M292 160 H318 V58 H336" class="d-line" marker-end="url(#arrow)"/>
+            <path d="M292 170 H318 V122 H336" class="d-line" marker-end="url(#arrow)"/>
+            <path d="M292 186 H318 V186 H336" class="d-line" marker-end="url(#arrow)"/>
+            <path d="M292 196 H318 V250 H336" class="d-line" marker-end="url(#arrow)"/>
 
-            <rect x="336" y="36" width="110" height="46" rx="8" class="d-box l2"/><text x="348" y="56" class="d-text">Claude Code</text><text x="348" y="71" class="d-sub">agent · worktree</text>
-            <rect x="336" y="125" width="110" height="46" rx="8" class="d-box l4"/><text x="348" y="145" class="d-text">Codex</text><text x="348" y="160" class="d-sub">agent · worktree</text>
-            <rect x="336" y="213" width="110" height="46" rx="8" class="d-box l1"/><text x="348" y="233" class="d-text">DeepSeek</text><text x="348" y="248" class="d-sub">agent · worktree</text>
+            <rect x="336" y="36" width="150" height="44" rx="8" class="d-box l2"/><text x="348" y="55" class="d-text">Claude Code ×N</text><text x="348" y="70" class="d-sub">sessions · worktrees</text>
+            <rect x="336" y="100" width="150" height="44" rx="8" class="d-box l4"/><text x="348" y="119" class="d-text">Codex</text><text x="348" y="134" class="d-sub">agent · worktree</text>
+            <rect x="336" y="164" width="150" height="44" rx="8" class="d-box l1"/><text x="348" y="183" class="d-text">DeepSeek</text><text x="348" y="198" class="d-sub">agent · third opinion</text>
+            <rect x="336" y="228" width="150" height="44" rx="8" class="d-box l5"/><text x="348" y="247" class="d-text">GPT</text><text x="348" y="262" class="d-sub">design · audits</text>
 
-            <rect x="336" y="272" width="110" height="24" rx="6" class="d-box l3"/><text x="346" y="288" class="d-sub">shared memory</text>
-            <path d="M391 259 V272" class="d-line-accent d-dash"/>
-            <path d="M391 171 V213" class="d-line-accent d-dash"/>
-            <path d="M391 82 V125" class="d-line-accent d-dash"/>
+            <rect x="336" y="296" width="150" height="40" rx="8" class="d-box-accent"/>
+            <text x="348" y="313" class="d-text">shared memory</text>
+            <text x="348" y="328" class="d-sub">12 agents registered</text>
+            <path d="M411 80 V100" class="d-line-accent d-dash"/>
+            <path d="M411 144 V164" class="d-line-accent d-dash"/>
+            <path d="M411 208 V228" class="d-line-accent d-dash"/>
+            <path d="M411 272 V296" class="d-line-accent d-dash"/>
 
-            <path d="M446 60 H470 V148 H486" class="d-line" marker-end="url(#arrow)"/>
-            <path d="M446 148 H486" class="d-line" marker-end="url(#arrow)"/>
-            <path d="M446 236 H470 V148" class="d-line"/>
+            <path d="M486 58 H503 V178 H520" class="d-line" marker-end="url(#arrow)"/>
+            <path d="M486 122 H503" class="d-line"/>
+            <path d="M486 186 H520" class="d-line" marker-end="url(#arrow)"/>
+            <path d="M486 250 H503 V178" class="d-line"/>
 
-            <rect x="486" y="112" width="62" height="72" rx="9" class="d-box l5"/>
-            <text x="494" y="134" class="d-tag">03:30</text>
-            <text x="494" y="152" class="d-text">14k</text>
-            <text x="494" y="168" class="d-sub">tests</text>
+            <rect x="520" y="142" width="104" height="72" rx="9" class="d-box l5"/>
+            <text x="530" y="164" class="d-tag">03:30 NIGHTLY</text>
+            <text x="530" y="184" class="d-text">14k tests</text>
+            <text x="530" y="200" class="d-sub">dated report</text>
 
-            <path d="M517 184 V320 H68 V176" class="d-line-accent d-dash" marker-end="url(#arrow)"/>
-            <text x="140" y="314" class="d-sub">weekly written report · what shipped, what is next</text>
+            <path d="M572 214 V398 H68 V206" class="d-line-accent d-dash" marker-end="url(#arrow)"/>
+            <text x="120" y="392" class="d-sub">weekly written report · what shipped, what is next</text>
 
-            <circle r="3.5" class="d-pulse"><animateMotion dur="6s" repeatCount="indefinite" path="M120 148 H140 M292 148 H336 M446 148 H486"/></circle>
+            <rect x="16" y="240" width="276" height="70" rx="9" class="d-box"/>
+            <text x="30" y="258" class="d-tag">AGENTS SHIPPED INSIDE THE PRODUCTS</text>
+            <text x="30" y="275" class="d-sub">AI-CRM: Alice, Boris, Daria, dispatcher</text>
+            <text x="30" y="289" class="d-sub">bookkeeper · HR · tenders · analyst (9)</text>
+            <text x="30" y="303" class="d-sub">Taya voice assistant · memory steward</text>
+
+            <rect x="16" y="318" width="276" height="56" rx="9" class="d-box l4"/>
+            <text x="30" y="336" class="d-tag">MEDIA AGENTS · VIDEO FACTORY</text>
+            <text x="30" y="353" class="d-sub">Seedance 2.5 video+speech · Seedream art</text>
+            <text x="30" y="367" class="d-sub">SpeechKit voice · local GPU music · QA</text>
+            <path d="M292 346 H314 V316 H336" class="d-line-accent d-dash"/>
+
+            <circle r="3.5" class="d-pulse"><animateMotion dur="6s" repeatCount="indefinite" path="M120 178 H140 M292 178 H336 M486 186 H520"/></circle>
           </svg>
         </figure>
 
@@ -419,7 +468,7 @@
           </div>
           <div>
             <h4>Agents do the typing, I own the result</h4>
-            <p>Several AI coding agents work in parallel, each in its own branch, sharing one memory so they do not repeat each other's mistakes. I set the architecture and review every change before it lands.</p>
+            <p>Several Claude Code sessions, Codex and DeepSeek write code in parallel, each in its own branch; GPT does design and audits. All of them share one memory, Cognitive Core, so they do not repeat each other's mistakes. The products ship their own agent teams: nine named agents in AI-CRM, a voice assistant, a memory steward. I set the architecture and review every change before it lands.</p>
           </div>
           <div>
             <h4>Tests every night</h4>

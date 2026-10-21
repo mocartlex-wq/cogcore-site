@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20261021a">
+  <link rel="stylesheet" href="style.css?v=20261021b">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0e14'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%232dd4bf' stroke-width='2' opacity='.35'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%232dd4bf' stroke-width='2' opacity='.7'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%232dd4bf'/%3E%3C/svg%3E">
 </head>
 <body>
@@ -401,64 +401,61 @@
       </div>
 
       <div class="how-grid">
-        <figure class="diagram-card diagram-scroll">
-          <svg viewBox="0 0 640 420" role="img" aria-label="Workflow: the client writes a brief; I design the architecture and review; a team of AI agents with roles (a planner, several programmers on Claude Code and Codex, a designer on GPT, a technician for servers and deploys, a reviewer on DeepSeek, Alice as translator) works in tandem through one shared memory, Cognitive Core, kept both on my PC and on the memory server: they consult each other in shared rooms, each does what it is best at, every agent reads what the others learned and writes back its own lessons; a nightly QA run of 14,000 tests checks the build; a written weekly report goes back to the client. The products ship their own agents: Alice, Boris, Daria, a dispatcher, a bookkeeper and more. A media team of agents (Seedance, Seedream, SpeechKit, local GPU tools) produces video with automatic review of every cut, connected to the same memory.">
-            <rect x="16" y="150" width="104" height="56" rx="9" class="d-box"/>
-            <text x="30" y="173" class="d-text">You</text>
-            <text x="30" y="190" class="d-sub">brief, in writing</text>
-            <path d="M120 178 H140" class="d-line" marker-end="url(#arrow)"/>
-
-            <rect x="140" y="142" width="152" height="72" rx="9" class="d-box-accent"/>
-            <text x="154" y="164" class="d-tag">ME</text>
-            <text x="154" y="182" class="d-text">architecture</text>
-            <text x="154" y="198" class="d-text">review · ownership</text>
-            <path d="M292 178 H304" class="d-line" marker-end="url(#arrow)"/>
-
-            <text x="306" y="20" class="d-tag">AGENT TEAM · ROLES · CONSULT VIA MEMORY</text>
-            <rect x="304" y="26" width="196" height="338" rx="12" class="d-box" style="fill:none;stroke-dasharray:3 4"/>
-            <path d="M321 46 V328" class="d-line-accent" style="stroke-width:3"/>
-            <path d="M321 50 H336" class="d-line-accent"/><circle cx="321" cy="50" r="3.5" class="d-pulse"/>
-            <rect x="336" y="32" width="150" height="36" rx="8" class="d-box l3"/><text x="348" y="47" class="d-text">Planner</text><text x="348" y="61" class="d-sub">plan · task breakdown</text>
-            <path d="M321 94 H336" class="d-line-accent"/><circle cx="321" cy="94" r="3.5" class="d-pulse"/>
-            <rect x="336" y="76" width="150" height="36" rx="8" class="d-box l2"/><text x="348" y="91" class="d-text">Programmers ×N</text><text x="348" y="105" class="d-sub">Claude Code · Codex</text>
-            <path d="M321 138 H336" class="d-line-accent"/><circle cx="321" cy="138" r="3.5" class="d-pulse"/>
-            <rect x="336" y="120" width="150" height="36" rx="8" class="d-box l5"/><text x="348" y="135" class="d-text">Designer</text><text x="348" y="149" class="d-sub">GPT · UI · audits</text>
-            <path d="M321 182 H336" class="d-line-accent"/><circle cx="321" cy="182" r="3.5" class="d-pulse"/>
-            <rect x="336" y="164" width="150" height="36" rx="8" class="d-box l4"/><text x="348" y="179" class="d-text">Technician</text><text x="348" y="193" class="d-sub">server · deploy · QA</text>
-            <path d="M321 226 H336" class="d-line-accent"/><circle cx="321" cy="226" r="3.5" class="d-pulse"/>
-            <rect x="336" y="208" width="150" height="36" rx="8" class="d-box l1"/><text x="348" y="223" class="d-text">Reviewer</text><text x="348" y="237" class="d-sub">DeepSeek · 2nd view</text>
-            <path d="M321 270 H336" class="d-line-accent"/><circle cx="321" cy="270" r="3.5" class="d-pulse"/>
-            <rect x="336" y="252" width="150" height="36" rx="8" class="d-box l2"/><text x="348" y="267" class="d-text">Translator</text><text x="348" y="281" class="d-sub">Alice · RU ↔ EN</text>
-            <path d="M321 328 H336" class="d-line-accent"/>
-            <rect x="336" y="300" width="150" height="56" rx="8" class="d-box-accent"/>
-            <text x="348" y="316" class="d-text">shared memory</text>
-            <text x="348" y="331" class="d-sub">PC copy + server</text>
-            <text x="348" y="346" class="d-sub">rooms: ask · answer</text>
-
-            <path d="M500 186 H520" class="d-line" marker-end="url(#arrow)"/>
-            <rect x="520" y="142" width="104" height="72" rx="9" class="d-box l5"/>
-            <text x="530" y="164" class="d-tag">03:30 NIGHTLY</text>
-            <text x="530" y="184" class="d-text">14k tests</text>
-            <text x="530" y="200" class="d-sub">dated report</text>
-
-            <path d="M572 214 V398 H68 V206" class="d-line-accent d-dash" marker-end="url(#arrow)"/>
-            <text x="120" y="392" class="d-sub">weekly written report · what shipped, what is next</text>
-
-            <rect x="16" y="240" width="276" height="70" rx="9" class="d-box"/>
-            <text x="30" y="258" class="d-tag">AGENTS SHIPPED INSIDE THE PRODUCTS</text>
-            <text x="30" y="275" class="d-sub">AI-CRM: Alice, Boris, Daria, dispatcher</text>
-            <text x="30" y="289" class="d-sub">bookkeeper · HR · tenders · analyst (9)</text>
-            <text x="30" y="303" class="d-sub">Taya voice assistant · memory steward</text>
-
-            <rect x="16" y="318" width="276" height="56" rx="9" class="d-box l4"/>
-            <text x="30" y="336" class="d-tag">MEDIA AGENTS · VIDEO FACTORY</text>
-            <text x="30" y="353" class="d-sub">Seedance 2.5 video+speech · Seedream art</text>
-            <text x="30" y="367" class="d-sub">SpeechKit voice · local GPU music · QA</text>
-            <path d="M292 346 H321 V328" class="d-line-accent d-dash"/>
-
-            <circle r="3.5" class="d-pulse"><animateMotion dur="4s" repeatCount="indefinite" path="M321 50 V328"/></circle>
-            <circle r="3.5" class="d-pulse"><animateMotion dur="4s" begin="2s" repeatCount="indefinite" path="M321 328 V50"/></circle>
-          </svg>
+        <figure class="diagram-card diagram-scroll how-diagram">
+          <svg class="team-svg" viewBox="0 0 1000 540" role="img" aria-label="How I work: you write a brief; I design the architecture and review; a team of six AI agent roles works around one shared memory and consults each other through it: a planner, programmers on Claude Code and Codex, a designer on GPT, a technician for servers and deploys, a reviewer on DeepSeek and Alice as translator; the shared memory, Cognitive Core, is kept on my PC and on the memory server and has rooms for asking and answering; a nightly run of 14,000 tests checks the build; a weekly written report returns to you. What the team ships: nine named agents inside AI-CRM, the Taya voice assistant, a memory steward, and a media team of agents producing video with automatic review of every cut.">
+            <rect x="20" y="214" width="130" height="64" rx="10" class="d-box"/>
+            <text x="36" y="240" class="d-text">You</text>
+            <text x="36" y="260" class="d-sub">brief, in writing</text>
+            <path d="M150 246 H170" class="d-line" marker-end="url(#arrow)"/>
+            <rect x="170" y="200" width="150" height="92" rx="10" class="d-box-accent"/>
+            <text x="186" y="224" class="d-tag">ME</text>
+            <text x="186" y="246" class="d-text">architecture</text>
+            <text x="186" y="264" class="d-text">review</text>
+            <text x="186" y="282" class="d-text">ownership</text>
+            <path d="M320 246 H338" class="d-line" marker-end="url(#arrow)"/>
+            <rect x="340" y="24" width="520" height="456" rx="16" class="d-box" style="fill:none;stroke-dasharray:3 5"/>
+            <text x="356" y="16" class="d-tag">AGENT TEAM · EACH ROLE PLAYS ITS STRENGTH · CONSULTS THROUGH SHARED MEMORY</text>
+            <ellipse cx="600" cy="250" rx="165" ry="190" class="d-line-accent d-dash" style="opacity:.45"/><circle r="4" class="d-pulse"><animateMotion dur="9s" begin="0s" repeatCount="indefinite" path="M435 250 A165 190 0 1 1 765 250 A165 190 0 1 1 435 250"/></circle><circle r="4" class="d-pulse"><animateMotion dur="9s" begin="3s" repeatCount="indefinite" path="M435 250 A165 190 0 1 1 765 250 A165 190 0 1 1 435 250"/></circle><circle r="4" class="d-pulse"><animateMotion dur="9s" begin="6s" repeatCount="indefinite" path="M435 250 A165 190 0 1 1 765 250 A165 190 0 1 1 435 250"/></circle>
+            <path d="M535 191 L484 125" class="d-line-accent"/><circle cx="535" cy="191" r="3.5" class="d-pulse"/>
+            <path d="M600 162 L600 92" class="d-line-accent"/><circle cx="600" cy="162" r="3.5" class="d-pulse"/>
+            <path d="M665 191 L716 125" class="d-line-accent"/><circle cx="665" cy="191" r="3.5" class="d-pulse"/>
+            <path d="M665 309 L716 375" class="d-line-accent"/><circle cx="665" cy="309" r="3.5" class="d-pulse"/>
+            <path d="M600 338 L600 408" class="d-line-accent"/><circle cx="600" cy="338" r="3.5" class="d-pulse"/>
+            <path d="M535 309 L484 375" class="d-line-accent"/><circle cx="535" cy="309" r="3.5" class="d-pulse"/>
+            <rect x="348" y="80" width="184" height="50" rx="10" class="d-box l3"/><text x="366" y="101" class="d-text">Planner</text><text x="366" y="118" class="d-sub">plan · task breakdown</text>
+            <rect x="508" y="37" width="184" height="50" rx="10" class="d-box l2"/><text x="526" y="58" class="d-text">Programmers ×N</text><text x="526" y="75" class="d-sub">Claude Code · Codex</text>
+            <rect x="668" y="80" width="184" height="50" rx="10" class="d-box l5"/><text x="686" y="101" class="d-text">Designer</text><text x="686" y="118" class="d-sub">GPT · UI · audits</text>
+            <rect x="668" y="370" width="184" height="50" rx="10" class="d-box l4"/><text x="686" y="391" class="d-text">Technician</text><text x="686" y="408" class="d-sub">server · deploy · QA</text>
+            <rect x="508" y="413" width="184" height="50" rx="10" class="d-box l1"/><text x="526" y="434" class="d-text">Reviewer</text><text x="526" y="451" class="d-sub">DeepSeek · 2nd view</text>
+            <rect x="348" y="370" width="184" height="50" rx="10" class="d-box l2"/><text x="366" y="391" class="d-text">Translator</text><text x="366" y="408" class="d-sub">Alice · RU ↔ EN</text>
+            <circle cx="600" cy="250" r="88" class="d-box-accent"/>
+            <text x="600" y="226" class="d-text" text-anchor="middle">shared memory</text>
+            <text x="600" y="248" class="d-sub" text-anchor="middle">Cognitive Core</text>
+            <text x="600" y="266" class="d-sub" text-anchor="middle">PC copy + server</text>
+            <text x="600" y="284" class="d-sub" text-anchor="middle">rooms: ask, answer</text>
+            
+            
+            
+            <path d="M860 246 H872" class="d-line" marker-end="url(#arrow)"/>
+            <rect x="872" y="200" width="120" height="92" rx="10" class="d-box l5"/>
+            <text x="884" y="224" class="d-tag">03:30 NIGHTLY</text>
+            <text x="884" y="248" class="d-text">14k tests</text>
+            <text x="884" y="266" class="d-sub">dated report</text>
+            <text x="884" y="282" class="d-sub">to you</text>
+            <path d="M932 292 V516 H85 V278" class="d-line-accent d-dash" marker-end="url(#arrow)"/>
+            <text x="360" y="510" class="d-sub">weekly written report · what shipped, what is next</text>
+            <rect x="20" y="320" width="300" height="78" rx="10" class="d-box"/>
+            <text x="34" y="340" class="d-tag">SHIPPED INSIDE THE PRODUCTS</text>
+            <text x="34" y="360" class="d-sub">AI-CRM, 9 agents: Alice, Boris, Daria,</text>
+            <text x="34" y="373" class="d-sub">dispatcher, bookkeeper, HR, tenders</text>
+            <text x="34" y="388" class="d-sub">Taya voice assistant · memory steward</text>
+            <rect x="20" y="408" width="300" height="64" rx="10" class="d-box l4"/>
+            <text x="34" y="428" class="d-tag">MEDIA AGENTS · VIDEO FACTORY</text>
+            <text x="34" y="446" class="d-sub">Seedance video and speech, Seedream</text>
+            <text x="34" y="461" class="d-sub">SpeechKit voice, local GPU music, QA</text>
+            <path d="M320 440 H340" class="d-line-accent d-dash"/>
+            <path d="M320 360 H340" class="d-line-accent d-dash"/>
+            </svg>
         </figure>
 
         <div class="how-list">

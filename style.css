@@ -406,3 +406,10 @@ code { font-size: .86em; overflow-wrap: anywhere; }
   .how-grid:has(> .how-diagram) .how-list { grid-template-columns: 1fr; }
   .how-diagram .team-svg { min-width: 760px; }
 }
+.how-steps { list-style: none; counter-reset: st; display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 14px; margin: 18px 0 0; padding: 0; }
+.how-steps li { counter-increment: st; border-top: 1px solid var(--border, #2a3340); padding-top: 12px; }
+.how-steps li::before { content: counter(st); display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; border: 1px solid var(--accent); color: var(--accent); font: 600 12px/1 var(--mono, monospace); margin-bottom: 8px; }
+.how-steps b { display: block; font-size: 15px; }
+.how-steps span { display: block; font-size: 13px; color: var(--muted); margin-top: 4px; }
+@media (max-width: 900px) { .how-steps { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (max-width: 480px) { .how-steps { grid-template-columns: 1fr; } }

@@ -1,3 +1,5 @@
+<!-- Дата: 20.10.2026
+Ответ на запрос: завершить дизайн на актуальной версии Claude. -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -12,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20261020f">
+  <link rel="stylesheet" href="style.css?v=20261020-ledger-current">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0e14'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%232dd4bf' stroke-width='2' opacity='.35'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%232dd4bf' stroke-width='2' opacity='.7'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%232dd4bf'/%3E%3C/svg%3E">
 </head>
 <body>
@@ -51,18 +53,19 @@
 <main id="top">
 
   <!-- ============ HERO ============ -->
-  <section class="hero">
-    <div class="wrap">
-      <div>
-        <p class="eyebrow">Self-hosted AI infrastructure · fixed-scope installation</p>
-        <h1>Your AI agents forget everything between sessions. I fix that <em>on your servers</em>, not in someone else's cloud.</h1>
-        <p class="lead">Self-hosted memory and MCP infrastructure for teams that cannot send data to a vendor. Memory and storage stay on your infrastructure; model requests go to the provider you choose. Installed, tested nightly, handed over with a runbook your team can run without me.</p>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-layout">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Self-hosted AI infrastructure</p>
+        <h1 id="hero-title">Agents forget.<br><em>Give them memory.</em></h1>
+        <p class="lead">I install long-term memory and MCP infrastructure on your servers. You get nightly tests and a runbook your team can run without me.</p>
+        <p class="data-boundary">Memory and storage stay on your infrastructure. Model requests go to the provider you choose.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact">Apply for a pilot</a>
-          <a class="btn btn-ghost" href="#packages">See the packages</a>
+          <a class="btn btn-primary" href="#contact">Apply for a pilot <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-ghost" href="#packages">See the packages <span aria-hidden="true">↓</span></a>
         </div>
         <p class="hero-note">Pilot: <strong>$2,500 · 2 weeks · one integration</strong>, credited in full to Setup if you continue. Setup: <strong>$6,000–9,000</strong>, fixed before we start.</p>
-
+        <p class="hero-proof"><a href="https://github.com/mocartlex-wq/cognitive-core" rel="noopener">Open-source core <span aria-hidden="true">↗</span></a><span>MIT · Written handover · One engineer</span></p>
         <!-- person block: enable once the name is confirmed
         <div class="person">
           <div class="person-avatar" aria-hidden="true"><svg class="mark"><use href="#mark"/></svg></div>
@@ -73,8 +76,20 @@
         </div>
         -->
       </div>
-
-      <figure class="diagram-card" aria-labelledby="stack-caption">
+      <figure class="memory-panel" aria-labelledby="memory-title memory-caption">
+        <div class="panel-topline"><span><span class="status-dot" aria-hidden="true"></span> COGNITIVE CORE</span><span>MEMORY / 01</span></div>
+        <div class="panel-heading"><h2 id="memory-title">From raw events<br>to lasting knowledge.</h2><svg class="memory-seal" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="43"/><circle cx="50" cy="50" r="31"/><circle cx="50" cy="50" r="19"/><circle cx="50" cy="50" r="5"/></svg></div>
+        <p class="panel-intro">Across sessions, tools and agents.</p>
+        <ol class="memory-layers" aria-label="Memory architecture">
+          <li class="memory-row layer-1"><span class="layer-index">L1</span><div><strong>Raw events</strong><span>Messages, tools and files</span></div><span class="layer-cadence">capture</span></li>
+          <li class="memory-row layer-2"><span class="layer-index">L2</span><div><strong>Daily buffers</strong><span>Summaries curated by an LLM</span></div><span class="layer-cadence">daily</span></li>
+          <li class="memory-row layer-3"><span class="layer-index">L3</span><div><strong>Master knowledge</strong><span>Durable knowledge · tools · pgvector</span></div><span class="layer-cadence">weekly</span></li>
+          <li class="memory-row layer-4"><span class="layer-index">L4</span><div><strong>Snapshots &amp; archive</strong><span>S3 storage and restore</span></div><span class="layer-cadence">monthly</span></li>
+        </ol>
+        <div class="audit-strip"><span class="layer-index">L5</span><div><strong>Audit log</strong><span>Append-only record of operations</span></div><span aria-hidden="true">↳</span></div>
+        <div class="recall-strip"><code>recall()</code><span>Operative workspace · KNN over L3 · Redis</span></div>
+        <figcaption id="memory-caption">Events are consolidated into knowledge. Recall brings it back to the agent.</figcaption>
+        <details class="architecture-details"><summary>Full architecture &amp; processing cadence</summary><figure class="diagram-card" aria-labelledby="stack-caption">
         <svg class="stack-svg" viewBox="0 0 520 380" role="img" aria-label="How memory works: MCP clients write raw events into layer one; an LLM curator consolidates them into daily buffers, master knowledge and an archive; an operative workspace answers recall queries; an append-only audit log records every operation.">
           <rect x="24" y="16" width="472" height="42" rx="9" class="d-box"/>
           <text x="40" y="36" class="d-tag">MCP CLIENTS</text>
@@ -138,6 +153,7 @@
           <li class="sl5"><b>Always: audit</b><span>Every operation is logged append-only (L5). Agents recall in about 30 ms.</span></li>
         </ol>
         <figcaption id="stack-caption">Cognitive Core: raw event → daily analysis → weekly synthesis → long-term knowledge. The agent remembers lessons, not keystrokes.</figcaption>
+      </figure></details>
       </figure>
     </div>
   </section>

@@ -402,7 +402,7 @@
 
       <div class="how-grid">
         <figure class="diagram-card diagram-scroll">
-          <svg viewBox="0 0 640 420" role="img" aria-label="Workflow: the client writes a brief; I design the architecture and review; a team of coding agents (several Claude Code sessions, Codex, DeepSeek, GPT) works in tandem through one shared memory, Cognitive Core, kept both on my PC and on the memory server: they consult each other in shared rooms, each does what it is best at, every agent reads what the others learned and writes back its own lessons; a nightly QA run of 14,000 tests checks the build; a written weekly report goes back to the client. The products ship their own agents: Alice, Boris, Daria, a dispatcher, a bookkeeper and more. A media team of agents (Seedance, Seedream, SpeechKit, local GPU tools) produces video with automatic review of every cut, connected to the same memory.">
+          <svg viewBox="0 0 640 420" role="img" aria-label="Workflow: the client writes a brief; I design the architecture and review; a team of AI agents with roles (a planner, several programmers on Claude Code and Codex, a designer on GPT, a technician for servers and deploys, a reviewer on DeepSeek) works in tandem through one shared memory, Cognitive Core, kept both on my PC and on the memory server: they consult each other in shared rooms, each does what it is best at, every agent reads what the others learned and writes back its own lessons; a nightly QA run of 14,000 tests checks the build; a written weekly report goes back to the client. The products ship their own agents: Alice, Boris, Daria, a dispatcher, a bookkeeper and more. A media team of agents (Seedance, Seedream, SpeechKit, local GPU tools) produces video with automatic review of every cut, connected to the same memory.">
             <rect x="16" y="150" width="104" height="56" rx="9" class="d-box"/>
             <text x="30" y="173" class="d-text">You</text>
             <text x="30" y="190" class="d-sub">brief, in writing</text>
@@ -414,25 +414,24 @@
             <text x="154" y="198" class="d-text">review · ownership</text>
             <path d="M292 178 H304" class="d-line" marker-end="url(#arrow)"/>
 
-            <text x="306" y="20" class="d-tag">CODING AGENTS · CONSULT VIA SHARED MEMORY</text>
+            <text x="306" y="20" class="d-tag">AGENT TEAM · ROLES · CONSULT VIA MEMORY</text>
             <rect x="304" y="28" width="196" height="334" rx="12" class="d-box" style="fill:none;stroke-dasharray:3 4"/>
-
-            <path d="M321 50 V316" class="d-line-accent" style="stroke-width:3"/>
-            <path d="M321 58 H336" class="d-line-accent"/><circle cx="321" cy="58" r="3.5" class="d-pulse"/>
-            <path d="M321 122 H336" class="d-line-accent"/><circle cx="321" cy="122" r="3.5" class="d-pulse"/>
-            <path d="M321 186 H336" class="d-line-accent"/><circle cx="321" cy="186" r="3.5" class="d-pulse"/>
-            <path d="M321 250 H336" class="d-line-accent"/><circle cx="321" cy="250" r="3.5" class="d-pulse"/>
-            <path d="M321 316 H336" class="d-line-accent"/>
-
-            <rect x="336" y="36" width="150" height="44" rx="8" class="d-box l2"/><text x="348" y="55" class="d-text">Claude Code ×N</text><text x="348" y="70" class="d-sub">main builds · fixes</text>
-            <rect x="336" y="100" width="150" height="44" rx="8" class="d-box l4"/><text x="348" y="119" class="d-text">Codex</text><text x="348" y="134" class="d-sub">parallel branch</text>
-            <rect x="336" y="164" width="150" height="44" rx="8" class="d-box l1"/><text x="348" y="183" class="d-text">DeepSeek</text><text x="348" y="198" class="d-sub">cross-check · review</text>
-            <rect x="336" y="228" width="150" height="44" rx="8" class="d-box l5"/><text x="348" y="247" class="d-text">GPT</text><text x="348" y="262" class="d-sub">design · audits</text>
-
-            <rect x="336" y="292" width="150" height="62" rx="8" class="d-box-accent"/>
-            <text x="348" y="310" class="d-text">shared memory</text>
-            <text x="348" y="326" class="d-sub">PC copy + server</text>
-            <text x="348" y="342" class="d-sub">rooms: ask · answer</text>
+            <path d="M321 50 V320" class="d-line-accent" style="stroke-width:3"/>
+            <path d="M321 55 H336" class="d-line-accent"/><circle cx="321" cy="55" r="3.5" class="d-pulse"/>
+            <rect x="336" y="36" width="150" height="38" rx="8" class="d-box l3"/><text x="348" y="52" class="d-text">Planner</text><text x="348" y="66" class="d-sub">plan · task breakdown</text>
+            <path d="M321 105 H336" class="d-line-accent"/><circle cx="321" cy="105" r="3.5" class="d-pulse"/>
+            <rect x="336" y="86" width="150" height="38" rx="8" class="d-box l2"/><text x="348" y="102" class="d-text">Programmers ×N</text><text x="348" y="116" class="d-sub">Claude Code · Codex</text>
+            <path d="M321 155 H336" class="d-line-accent"/><circle cx="321" cy="155" r="3.5" class="d-pulse"/>
+            <rect x="336" y="136" width="150" height="38" rx="8" class="d-box l5"/><text x="348" y="152" class="d-text">Designer</text><text x="348" y="166" class="d-sub">GPT · UI · audits</text>
+            <path d="M321 205 H336" class="d-line-accent"/><circle cx="321" cy="205" r="3.5" class="d-pulse"/>
+            <rect x="336" y="186" width="150" height="38" rx="8" class="d-box l4"/><text x="348" y="202" class="d-text">Technician</text><text x="348" y="216" class="d-sub">server · deploy · QA</text>
+            <path d="M321 255 H336" class="d-line-accent"/><circle cx="321" cy="255" r="3.5" class="d-pulse"/>
+            <rect x="336" y="236" width="150" height="38" rx="8" class="d-box l1"/><text x="348" y="252" class="d-text">Reviewer</text><text x="348" y="266" class="d-sub">DeepSeek · 2nd view</text>
+            <path d="M321 320 H336" class="d-line-accent"/>
+            <rect x="336" y="290" width="150" height="62" rx="8" class="d-box-accent"/>
+            <text x="348" y="308" class="d-text">shared memory</text>
+            <text x="348" y="324" class="d-sub">PC copy + server</text>
+            <text x="348" y="340" class="d-sub">rooms: ask · answer</text>
 
             <path d="M500 186 H520" class="d-line" marker-end="url(#arrow)"/>
             <rect x="520" y="142" width="104" height="72" rx="9" class="d-box l5"/>
@@ -453,10 +452,10 @@
             <text x="30" y="336" class="d-tag">MEDIA AGENTS · VIDEO FACTORY</text>
             <text x="30" y="353" class="d-sub">Seedance 2.5 video+speech · Seedream art</text>
             <text x="30" y="367" class="d-sub">SpeechKit voice · local GPU music · QA</text>
-            <path d="M292 346 H321 V316" class="d-line-accent d-dash"/>
+            <path d="M292 346 H321 V320" class="d-line-accent d-dash"/>
 
-            <circle r="3.5" class="d-pulse"><animateMotion dur="4s" repeatCount="indefinite" path="M321 58 V316"/></circle>
-            <circle r="3.5" class="d-pulse"><animateMotion dur="4s" begin="2s" repeatCount="indefinite" path="M321 316 V58"/></circle>
+            <circle r="3.5" class="d-pulse"><animateMotion dur="4s" repeatCount="indefinite" path="M321 55 V320"/></circle>
+            <circle r="3.5" class="d-pulse"><animateMotion dur="4s" begin="2s" repeatCount="indefinite" path="M321 320 V55"/></circle>
           </svg>
         </figure>
 
@@ -467,7 +466,7 @@
           </div>
           <div>
             <h4>Agents do the typing, I own the result</h4>
-            <p>Several Claude Code sessions, Codex, DeepSeek and GPT work as one team, in tandem through a shared memory, Cognitive Core. The memory is kept in two places, a local copy on my PC and the memory server, so work continues if either is down. They consult each other in shared rooms (ask, answer), and each does what it is best at: Claude Code builds and fixes, Codex takes a parallel branch, DeepSeek cross-checks, GPT does design and audits. Each agent reads what the others learned before it starts and writes back its own lessons, so a mistake made once is not made again. The products ship their own agent teams: nine named agents in AI-CRM, a voice assistant, a memory steward. A media team (Seedance, Seedream, SpeechKit, local GPU tools) produces video ads with an automatic review of every cut. I set the architecture and review every change before it lands.</p>
+            <p>The agents work as one team with roles, like a small studio: a planner breaks the task into steps, programmers (several Claude Code sessions and Codex) build and fix, a designer (GPT) does the interface and audits, a technician runs servers, deploys and tests, a reviewer (DeepSeek) cross-checks. They work in tandem through a shared memory, Cognitive Core, kept in two places, a local copy on my PC and the memory server, so work continues if either is down. They consult each other in shared rooms (ask, answer), and each agent reads what the others learned before it starts and writes back its own lessons, so a mistake made once is not made again. The products ship their own agent teams: nine named agents in AI-CRM, a voice assistant, a memory steward. A media team (Seedance, Seedream, SpeechKit, local GPU tools) produces video ads with an automatic review of every cut. I set the architecture and review every change before it lands.</p>
           </div>
           <div>
             <h4>Tests every night</h4>

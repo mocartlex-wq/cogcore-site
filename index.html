@@ -402,7 +402,7 @@
 
       <div class="how-grid">
         <figure class="diagram-card diagram-scroll">
-          <svg viewBox="0 0 640 420" role="img" aria-label="Workflow: the client writes a brief; I design the architecture and review; a team of coding agents (several Claude Code sessions, Codex, DeepSeek, GPT for design) works in parallel; all of them share one memory, Cognitive Core, with twelve registered agents; a nightly QA run of 14,000 tests checks the build; a written weekly report goes back to the client. The products ship their own agents: Alice, Boris, Daria, a dispatcher, a bookkeeper and more. A media team of agents (Seedance, Seedream, SpeechKit, local GPU tools) produces video with automatic review of every cut.">
+          <svg viewBox="0 0 640 420" role="img" aria-label="Workflow: the client writes a brief; I design the architecture and review; a team of coding agents (several Claude Code sessions, Codex, DeepSeek, GPT) works in tandem through one shared memory, Cognitive Core: they consult each other in shared rooms, each does what it is best at, every agent reads what the others learned and writes back its own lessons; a nightly QA run of 14,000 tests checks the build; a written weekly report goes back to the client. The products ship their own agents: Alice, Boris, Daria, a dispatcher, a bookkeeper and more. A media team of agents (Seedance, Seedream, SpeechKit, local GPU tools) produces video with automatic review of every cut, connected to the same memory.">
             <rect x="16" y="150" width="104" height="56" rx="9" class="d-box"/>
             <text x="30" y="173" class="d-text">You</text>
             <text x="30" y="190" class="d-sub">brief, in writing</text>
@@ -412,31 +412,28 @@
             <text x="154" y="164" class="d-tag">ME</text>
             <text x="154" y="182" class="d-text">architecture</text>
             <text x="154" y="198" class="d-text">review · ownership</text>
+            <path d="M292 178 H304" class="d-line" marker-end="url(#arrow)"/>
 
-            <text x="336" y="26" class="d-tag">CODING AGENTS · IN PARALLEL</text>
-            <path d="M292 160 H318 V58 H336" class="d-line" marker-end="url(#arrow)"/>
-            <path d="M292 170 H318 V122 H336" class="d-line" marker-end="url(#arrow)"/>
-            <path d="M292 186 H318 V186 H336" class="d-line" marker-end="url(#arrow)"/>
-            <path d="M292 196 H318 V250 H336" class="d-line" marker-end="url(#arrow)"/>
+            <text x="306" y="20" class="d-tag">CODING AGENTS · CONSULT VIA SHARED MEMORY</text>
+            <rect x="304" y="28" width="196" height="318" rx="12" class="d-box" style="fill:none;stroke-dasharray:3 4"/>
 
-            <rect x="336" y="36" width="150" height="44" rx="8" class="d-box l2"/><text x="348" y="55" class="d-text">Claude Code ×N</text><text x="348" y="70" class="d-sub">sessions · worktrees</text>
-            <rect x="336" y="100" width="150" height="44" rx="8" class="d-box l4"/><text x="348" y="119" class="d-text">Codex</text><text x="348" y="134" class="d-sub">agent · worktree</text>
-            <rect x="336" y="164" width="150" height="44" rx="8" class="d-box l1"/><text x="348" y="183" class="d-text">DeepSeek</text><text x="348" y="198" class="d-sub">agent · third opinion</text>
+            <path d="M321 50 V316" class="d-line-accent" style="stroke-width:3"/>
+            <path d="M321 58 H336" class="d-line-accent"/><circle cx="321" cy="58" r="3.5" class="d-pulse"/>
+            <path d="M321 122 H336" class="d-line-accent"/><circle cx="321" cy="122" r="3.5" class="d-pulse"/>
+            <path d="M321 186 H336" class="d-line-accent"/><circle cx="321" cy="186" r="3.5" class="d-pulse"/>
+            <path d="M321 250 H336" class="d-line-accent"/><circle cx="321" cy="250" r="3.5" class="d-pulse"/>
+            <path d="M321 316 H336" class="d-line-accent"/>
+
+            <rect x="336" y="36" width="150" height="44" rx="8" class="d-box l2"/><text x="348" y="55" class="d-text">Claude Code ×N</text><text x="348" y="70" class="d-sub">main builds · fixes</text>
+            <rect x="336" y="100" width="150" height="44" rx="8" class="d-box l4"/><text x="348" y="119" class="d-text">Codex</text><text x="348" y="134" class="d-sub">parallel branch</text>
+            <rect x="336" y="164" width="150" height="44" rx="8" class="d-box l1"/><text x="348" y="183" class="d-text">DeepSeek</text><text x="348" y="198" class="d-sub">cross-check · review</text>
             <rect x="336" y="228" width="150" height="44" rx="8" class="d-box l5"/><text x="348" y="247" class="d-text">GPT</text><text x="348" y="262" class="d-sub">design · audits</text>
 
-            <rect x="336" y="296" width="150" height="40" rx="8" class="d-box-accent"/>
-            <text x="348" y="313" class="d-text">shared memory</text>
-            <text x="348" y="328" class="d-sub">12 agents registered</text>
-            <path d="M411 80 V100" class="d-line-accent d-dash"/>
-            <path d="M411 144 V164" class="d-line-accent d-dash"/>
-            <path d="M411 208 V228" class="d-line-accent d-dash"/>
-            <path d="M411 272 V296" class="d-line-accent d-dash"/>
+            <rect x="336" y="292" width="150" height="46" rx="8" class="d-box-accent"/>
+            <text x="348" y="310" class="d-text">shared memory</text>
+            <text x="348" y="326" class="d-sub">rooms: ask · answer</text>
 
-            <path d="M486 58 H503 V178 H520" class="d-line" marker-end="url(#arrow)"/>
-            <path d="M486 122 H503" class="d-line"/>
-            <path d="M486 186 H520" class="d-line" marker-end="url(#arrow)"/>
-            <path d="M486 250 H503 V178" class="d-line"/>
-
+            <path d="M500 186 H520" class="d-line" marker-end="url(#arrow)"/>
             <rect x="520" y="142" width="104" height="72" rx="9" class="d-box l5"/>
             <text x="530" y="164" class="d-tag">03:30 NIGHTLY</text>
             <text x="530" y="184" class="d-text">14k tests</text>
@@ -455,9 +452,10 @@
             <text x="30" y="336" class="d-tag">MEDIA AGENTS · VIDEO FACTORY</text>
             <text x="30" y="353" class="d-sub">Seedance 2.5 video+speech · Seedream art</text>
             <text x="30" y="367" class="d-sub">SpeechKit voice · local GPU music · QA</text>
-            <path d="M292 346 H314 V316 H336" class="d-line-accent d-dash"/>
+            <path d="M292 346 H321 V316" class="d-line-accent d-dash"/>
 
-            <circle r="3.5" class="d-pulse"><animateMotion dur="6s" repeatCount="indefinite" path="M120 178 H140 M292 178 H336 M486 186 H520"/></circle>
+            <circle r="3.5" class="d-pulse"><animateMotion dur="4s" repeatCount="indefinite" path="M321 58 V316"/></circle>
+            <circle r="3.5" class="d-pulse"><animateMotion dur="4s" begin="2s" repeatCount="indefinite" path="M321 316 V58"/></circle>
           </svg>
         </figure>
 
@@ -468,7 +466,7 @@
           </div>
           <div>
             <h4>Agents do the typing, I own the result</h4>
-            <p>Several Claude Code sessions, Codex and DeepSeek write code in parallel, each in its own branch; GPT does design and audits. All of them share one memory, Cognitive Core, so they do not repeat each other's mistakes. The products ship their own agent teams: nine named agents in AI-CRM, a voice assistant, a memory steward. A media team (Seedance, Seedream, SpeechKit, local GPU tools) produces video ads with an automatic review of every cut. I set the architecture and review every change before it lands.</p>
+            <p>Several Claude Code sessions, Codex, DeepSeek and GPT work as one team, in tandem through a shared memory, Cognitive Core. They consult each other in shared rooms (ask, answer), and each does what it is best at: Claude Code builds and fixes, Codex takes a parallel branch, DeepSeek cross-checks, GPT does design and audits. Each agent reads what the others learned before it starts and writes back its own lessons, so a mistake made once is not made again. The products ship their own agent teams: nine named agents in AI-CRM, a voice assistant, a memory steward. A media team (Seedance, Seedream, SpeechKit, local GPU tools) produces video ads with an automatic review of every cut. I set the architecture and review every change before it lands.</p>
           </div>
           <div>
             <h4>Tests every night</h4>

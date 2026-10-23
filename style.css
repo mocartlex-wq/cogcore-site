@@ -414,3 +414,16 @@ code { font-size: .86em; overflow-wrap: anywhere; }
 @media (max-width: 900px) { .how-steps { grid-template-columns: repeat(2, minmax(0,1fr)); } }
 @media (max-width: 480px) { .how-steps { grid-template-columns: 1fr; } }
 .note-small { font-size: 13px; color: var(--faint, #8a96a6); margin-top: 10px; font-style: italic; }
+
+/* Дата: 22.10.2026. Ответ: мобильное раскрытие схемы и читаемый текст в light. */
+.how-diagram { overflow: visible; }
+.team-diagram-details > summary { display: none; color: var(--text); font: 500 14px/1.6 var(--body); cursor: pointer; }
+.team-diagram-scroll { overflow-x: auto; }
+@media (max-width: 640px) {
+  .team-diagram-details > summary { display: list-item; padding-block: 9px; min-height: 44px; }
+  .team-diagram-details[open] > summary { margin-bottom: 14px; }
+  .how-diagram .how-steps { margin-top: 10px; }
+}
+@media (prefers-color-scheme: light) {
+  .how-diagram .d-sub, .how-diagram .d-tag { opacity: 1 !important; }
+}

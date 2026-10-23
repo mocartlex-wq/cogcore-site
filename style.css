@@ -427,3 +427,11 @@ code { font-size: .86em; overflow-wrap: anywhere; }
 @media (prefers-color-scheme: light) {
   .how-diagram .d-sub, .how-diagram .d-tag { opacity: 1 !important; }
 }
+
+/* Дата: 23.10.2026. Ответ: компактная карта кейса на телефоне, полное изображение по раскрытию. */
+.case-map-details > summary { display: none; }
+@media (max-width: 640px) {
+  .case-map-details { border: 1px solid var(--border-strong); border-radius: 10px; background: var(--surface); }
+  .case-map-details > summary { display: list-item; min-height: 48px; padding: 13px 16px; color: var(--text); font: 500 14px/1.6 var(--body); cursor: pointer; }
+  .case-map-details .frame { border: 0; border-top: 1px solid var(--border-strong); border-radius: 0 0 9px 9px; }
+}

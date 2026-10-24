@@ -435,3 +435,20 @@ code { font-size: .86em; overflow-wrap: anywhere; }
   .case-map-details > summary { display: list-item; min-height: 48px; padding: 13px 16px; color: var(--text); font: 500 14px/1.6 var(--body); cursor: pointer; }
   .case-map-details .frame { border: 0; border-top: 1px solid var(--border-strong); border-radius: 0 0 9px 9px; }
 }
+
+/* lead form (to CRM via intake worker; mailto fallback while the endpoint is empty) */
+.lead-form { border: 1px solid var(--border-strong); border-radius: 12px; background: var(--surface); overflow: hidden; }
+.lead-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 16px; padding: 22px 22px 6px; }
+.lead-fields label { display: grid; gap: 6px; font-size: 13px; color: var(--muted); }
+.lead-fields label.wide { grid-column: 1 / -1; }
+.lead-fields .opt { color: var(--faint); font-size: 12px; }
+.lead-fields input, .lead-fields select, .lead-fields textarea { font: 15px/1.4 var(--body); color: var(--text); background: var(--bg); border: 1px solid var(--border-strong); border-radius: 8px; padding: 10px 12px; width: 100%; }
+.lead-fields textarea { resize: vertical; min-height: 120px; }
+.lead-fields input:focus, .lead-fields select:focus, .lead-fields textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.lead-fields .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.lead-actions { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; padding: 12px 22px 6px; }
+.lead-alt { font-size: 14px; color: var(--muted); }
+.lead-form .form-note { padding: 6px 22px 20px; font-size: 13px; margin: 0; }
+.lead-form .form-note.ok { color: var(--accent); }
+.lead-form .form-note.err { color: #e5a46b; }
+@media (max-width: 640px) { .lead-fields { grid-template-columns: 1fr; padding: 18px 16px 4px; } .lead-actions, .lead-form .form-note { padding-left: 16px; padding-right: 16px; } }

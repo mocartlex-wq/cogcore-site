@@ -542,7 +542,7 @@
         <p class="eyebrow">Contact</p>
         <h2>Tell me what should run on your server</h2>
         <p class="muted">Send the form or one email. Say which package you have in mind, what you want to run and what it must connect to. You get a written reply within one working day with questions or a scope.</p>
-        <p class="email"><a href="mailto:hello@aimail.art?subject=CogCore%20pilot%20request">hello@aimail.art</a></p>
+        <p class="email"><a href="mailto:hello@aimail.art?subject=%5Baimail%5D%20CogCore%20pilot%20request">hello@aimail.art</a></p>
         <ul class="contact-points">
           <li><strong>What happens next.</strong> Written reply → a few questions about your environment → scope and dates in writing → start.</li>
           <li><strong>Pilot slots are limited.</strong> Two at a time, so each gets attention. $2,500, credited to Setup.</li>
@@ -571,7 +571,7 @@
         </div>
         <div class="lead-actions">
           <button class="btn btn-primary" type="submit">Send request</button>
-          <a class="lead-alt" href="mailto:hello@aimail.art?subject=CogCore%20request">or email hello@aimail.art</a>
+          <a class="lead-alt" href="mailto:hello@aimail.art?subject=%5Baimail%5D%20CogCore%20request">or email hello@aimail.art</a>
         </div>
         <p class="form-note" id="lead-status" role="status" aria-live="polite">No calls needed.</p>
       </form>
@@ -586,7 +586,7 @@
     <p>
       <a href="https://github.com/mocartlex-wq/cognitive-core" rel="noopener">GitHub</a>
       <a href="https://mcp.me-ai.ru" rel="noopener">Public instance</a>
-      <a href="mailto:hello@aimail.art">hello@aimail.art</a>
+      <a href="mailto:hello@aimail.art?subject=%5Baimail%5D%20CogCore">hello@aimail.art</a>
     </p>
   </div>
 </footer>
@@ -624,7 +624,7 @@
     function say(t, cls){ st.textContent = t; st.className = 'form-note ' + (cls||''); }
     function mailto(d){
       var NL = String.fromCharCode(10); var body = 'Name: ' + d.name + NL + 'Company: ' + (d.company_name || '-') + NL + 'Package: ' + d.package + NL + NL + d.message;
-      location.href = 'mailto:hello@aimail.art?subject=' + encodeURIComponent('CogCore — '+d.package+' request') + '&body=' + encodeURIComponent(body);
+      location.href = 'mailto:hello@aimail.art?subject=' + encodeURIComponent('[aimail] CogCore — '+d.package+' request') + '&body=' + encodeURIComponent(body);
     }
     f.addEventListener('submit', function (ev) {
       ev.preventDefault();
